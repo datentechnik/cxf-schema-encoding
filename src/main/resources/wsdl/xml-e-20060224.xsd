@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2006 sp2 U (http://www.altova.com) by Gerald Stockinger (XEN Information Systems GmbH) -->
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Herbert Pacnik (Amt der Stmk. Landesregierung Informationstechnik) -->
+<!-- xml-e V20050307 Xml Spezifikation einer generischen Eingangsprotokollierung -->
+<xsd:schema xmlns:moaspss="http://reference.e-government.gv.at/namespace/moa/20020822#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:p="http://reference.e-government.gv.at/namespace/persondata/de/20040201#" xmlns="http://reference.e-government.gv.at/namespace/antragsdaten/de/20040917#" xmlns:xades="http://uri.etsi.org/01903/v1.1.1#" targetNamespace="http://reference.e-government.gv.at/namespace/antragsdaten/de/20040917#" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:import namespace="http://reference.e-government.gv.at/namespace/moa/20020822#" schemaLocation="MOA-SPSS-1.3.xsd"/>
+	<xsd:import namespace="http://uri.etsi.org/01903/v1.1.1#" schemaLocation="XADES.xsd"/>
+	<xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
+	<!--Start EingangsProtokoll-->
+	<xsd:element name="elektronischerEingang" type="elEingangsTyp">
+		<xsd:annotation>
+			<xsd:documentation>Dient dem Nachweis des Datums und der Zeit des Einlangens und der Authentizität des Antrags, auch wenn dieser unsigniert eingelangt ist.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="elEingangsTyp">
+		<xsd:sequence>
+			<xsd:element ref="EingangsDaten"/>
+			<xsd:element ref="EingangsProtokoll" minOccurs="0"/>
+			<xsd:element ref="VerwaltungsInterneDaten" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--Start Eingangsprotokoll -->
+	<xsd:element name="EingangsProtokoll" type="EingangsProtokollTyp"/>
+	<xsd:complexType name="EingangsProtokollTyp">
+		<xsd:sequence>
+			<xsd:element ref="Geschaeftszahl" minOccurs="0"/>
+			<xsd:element ref="Eingangsnummer" minOccurs="0"/>
+			<xsd:element ref="EingangsZeitpunkt"/>
+			<xsd:element name="SignaturPruefResultat" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Ergebnis der Signaturprüfung zum Zeitpunkt der Antragsstellung. Enthält darüber hinaus auch Informationen über das verwendete Zertifikat</xsd:documentation>
+				</xsd:annotation>
+				<xsd:complexType>
+					<xsd:sequence> 
+						<xsd:element ref="moaspss:VerifyXMLSignatureResponse"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="HashValueEingangsDaten" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Prüfsumme des Antrags. Sollte aus dem Element "/dsig:Signature/dsig:SignedInfo/dsig:Reference/dsig:DigestValue" der dig. Signatur des Antrags entnommen werden. Falls der Antrag unsigniert sein sollte, muss der Hashwert im Backoffice errechnet werden.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="DigitaleSignatur" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Hier könne Signaturen über das Protokoll eingetragen werden.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="ProtokollDaten" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--Start AntragsDaten -->
+	<!--Start InterneDaten -->
+	<xsd:element name="VerwaltungsInterneDaten" type="VerwaltungsInterneDatenTyp"/>
+	<xsd:complexType name="VerwaltungsInterneDatenTyp">
+		<xsd:annotation>
+			<xsd:documentation>Für diejenigen Behörden, die eine kompakte Sicht der Eckdaten des Antrags wünschen (zB Burgenland, Salzburg). Vorschlag: Beim Antragssteller sollten weitere OPERATIVE bpks (Zustelllung ..) gespeichert werden. Nicht notwendigerweise verschlüsselt ZB juristische PAX</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="bPk" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="interneBeilagen" minOccurs="0"/>
+			<xsd:element name="Stylesheet" minOccurs="0">
+				<xsd:complexType>
+					<xsd:choice>
+						<xsd:element name="XSL"/>
+						<xsd:element name="URL" type="xsd:anyURI"/>
+					</xsd:choice>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Fehler" minOccurs="0" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Fehlermeldung" type="xsd:string"/>
+						<xsd:element name="XPATH" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="weitereDaten" type="weitereDatenTyp" minOccurs="0"/>
+			<xsd:element name="Validiert" type="xsd:boolean" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<!--Start referenzierte Hilfselemente -->
+	<!--ref XMLSchema-->
+	<xsd:element name="VerfahrensName" type="xsd:string"/>
+	<xsd:element name="BeilageName" type="xsd:string"/>
+	<xsd:element name="DateiName" type="xsd:string"/>
+	<xsd:element name="DateiGroesse" type="xsd:integer"/>
+	<xsd:element name="Eingangsnummer" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Eindeutige "Zahl" zur Identifikation des Antrages im Backoffice</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="HashValue" type="xsd:string"/>
+	<xsd:element name="HashValueEingangsDaten" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Prüfsumme des Antrags. Sollte aus dem Element "/dsig:Signature/dsig:SignedInfo/dsig:Reference/dsig:DigestValue" der dig. Signatur des Antrags entnommen werden. Falls der Antrag unsigniert sein sollte, muss der Hashwert im Backoffice errechnet werden.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Geschaeftszahl" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Eindeutige "Aktenzahl", vergeben durch ELAK-System der Stelle (sofern diese zu dem Zeitpunkt bereits bekannt ist)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="MimeType" type="xsd:string"/>
+	<xsd:element name="NameBezeichnung" type="xsd:string"/>
+	<xsd:element name="EingangsZeitpunkt" type="xsd:dateTime">
+		<xsd:annotation>
+			<xsd:documentation>Zeitpunkt (Datum UND Uhrzeit) des Eingangs. Serverzeit scheint ausreichnend.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!--ref self-->
+	<xsd:element name="EingangsDaten" type="EingangsDatenTyp"/>
+	<xsd:element name="Zahl" type="ZahlTyp"/>
+	<!--Start Komplexe Hilfselemente-->
+	<xsd:complexType name="EingangsDatenTyp">
+		<xsd:sequence>
+			<xsd:any namespace="##other" processContents="skip"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="weitereDatenTyp">
+		<xsd:sequence>
+			<xsd:any namespace="##other" processContents="skip"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="interneBeilagen" type="interneBeilagenTyp"/>
+	<xsd:complexType name="interneBeilagenTyp">
+		<xsd:sequence>
+			<xsd:element ref="BeilageName"/>
+			<xsd:element ref="bPk"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="bPk" type="bpkTyp"/>
+	<xsd:complexType name="bpkTyp">
+		<xsd:sequence>
+			<xsd:element name="Wert" type="xsd:string"/>
+			<xsd:element name="Bereich" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="DigitaleSignatur" type="digSigTyp"/>
+	<xsd:complexType name="digSigTyp">
+		<xsd:sequence>
+			<xsd:element ref="dsig:Signature" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="xades:TimeStamp" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="SpezifischeAntragsDaten" type="SpezifischeAntragsDatenTyp"/>
+	<xsd:complexType name="SpezifischeAntragsDatenTyp">
+		<xsd:sequence/>
+	</xsd:complexType>
+	<xsd:complexType name="ZahlTyp"/>
+	<xsd:element name="ProtokollDaten" type="ProtokollDatenTyp">
+		<xsd:annotation>
+			<xsd:documentation>Container-Element, das weitere Daten kapselt, welche z.B. vom Empfänger an den Sender zurückgemeldet werden  </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ProtokollDatenTyp">
+		<xsd:sequence>
+			<xsd:any namespace="##other" processContents="skip"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

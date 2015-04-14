@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema elementFormDefault="qualified" targetNamespace="http://reference.e-government.gv.at/namespace/ediakt/20050504#" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:edi="http://reference.e-government.gv.at/namespace/ediakt/20050504#" xmlns:p="http://reference.e-government.gv.at/namespace/persondata/20020228#" xmlns:xpdl="http://www.wfmc.org/2002/XPDL1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<!-- Importing PersonData-Schema --> 
+	<xs:import namespace="http://reference.e-government.gv.at/namespace/persondata/20020228#" schemaLocation="PersonData_20_en_dt.xsd"/>
+	<!-- Importing XMLDSig-Schema -->
+	<xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
+	<!-- Importing XPDL-Schema -->
+	<xs:import namespace="http://www.wfmc.org/2002/XPDL1.0" schemaLocation="TC-1025_schema_10_xpdl.xsd"/>
+	<!-- EDIAKT Root-Element -->
+	<xs:element name="Ediakt" type="edi:EdiaktType"/>
+	<xs:complexType name="EdiaktType">
+		<xs:sequence>
+			<xs:element name="Header" type="edi:HeaderType"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="ProcessData" type="edi:ProcessDataType"/>
+			<xs:element name="MetaData" type="edi:MetaDataType"/>
+			<xs:element name="Payload">
+				<xs:complexType>
+					<xs:choice maxOccurs="unbounded">
+						<xs:element maxOccurs="unbounded" name="Layer3" type="edi:Layer3Type"/>
+						<xs:element maxOccurs="unbounded" name="Layer2" type="edi:Layer2Type"/>
+						<xs:element maxOccurs="unbounded" name="Layer1" type="edi:Layer1Type"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element maxOccurs="unbounded" minOccurs="0" ref="dsig:Signature"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HeaderType">
+		<xs:sequence>
+			<xs:element name="Receiver" type="edi:ReceiverType"/>
+			<xs:element name="Sender" type="p:PersonDataType"/>
+			<xs:element minOccurs="0" name="Purpose" type="edi:PurposeType"/>
+			<xs:element minOccurs="0" name="CoveringLetter" type="xs:IDREF"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Layer3" type="edi:Layer3Type"/>
+	<xs:complexType name="Layer3Type">
+		<xs:sequence>
+			<xs:element name="Subject" type="xs:string"/>
+			<xs:element name="MetaData" type="edi:MetaDataType"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="ProcessData" type="edi:ProcessDataType"/>
+			<xs:element name="Payload">
+				<xs:complexType>
+					<xs:choice maxOccurs="unbounded">
+						<xs:element maxOccurs="unbounded" name="Layer2" type="edi:Layer2Type"/>
+						<xs:element maxOccurs="unbounded" name="Layer1" type="edi:Layer1Type"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="References" type="edi:ReferencesType"/>
+			<xs:element minOccurs="0" name="SpecialData" type="edi:SpecialDataType"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="ElakSignature" type="edi:ElakSignatureType"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" ref="dsig:Signature"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Layer2" type="edi:Layer2Type"/>
+	<xs:complexType name="Layer2Type">
+		<xs:sequence>
+			<xs:element name="Subject" type="xs:string"/>
+			<xs:element name="MetaData" type="edi:MetaDataType"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="ProcessData" type="edi:ProcessDataType"/>
+			<xs:element name="Payload">
+				<xs:complexType>
+					<xs:choice maxOccurs="unbounded">
+						<xs:element maxOccurs="unbounded" name="Layer1" type="edi:Layer1Type"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="References" type="edi:ReferencesType"/>
+			<xs:element minOccurs="0" name="SpecialData" type="edi:SpecialDataType"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="ElakSignature" type="edi:ElakSignatureType"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" ref="dsig:Signature"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Layer1" type="edi:Layer1Type"/>
+	<xs:complexType name="Layer1Type">
+		<xs:sequence>
+			<xs:element name="Subject" type="xs:string"/>
+			<xs:element name="MetaData" type="edi:MetaDataType"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="ProcessData" type="edi:ProcessDataType"/>
+			<xs:element minOccurs="0" name="MainDocument" type="xs:IDREF"/>
+			<xs:element minOccurs="0" name="Payload">
+				<xs:complexType>
+					<xs:choice maxOccurs="unbounded">
+						<xs:element maxOccurs="unbounded" name="Layer0" type="edi:Layer0Type"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="References" type="edi:ReferencesType"/>
+			<xs:element minOccurs="0" name="BusinessType" type="xs:token"/>
+			<xs:element minOccurs="0" name="SpecialData" type="edi:SpecialDataType"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="ElakSignature" type="edi:ElakSignatureType"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" ref="dsig:Signature"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Layer0Type">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="Subject" type="xs:string"/>
+			<xs:element name="MetaData" type="edi:MetaDataType"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="ProcessData" type="edi:ProcessDataType"/>
+			<xs:element name="Payload" type="edi:PayloadType"/>
+			<xs:element minOccurs="0" name="SpecialData" type="edi:SpecialDataType"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="ElakSignature" type="edi:ElakSignatureType"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" ref="dsig:Signature"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:ID"/>
+	</xs:complexType>
+	<!-- Payload of the Documents -->
+	<xs:element name="Payload" type="edi:PayloadType"/>
+	<xs:complexType name="PayloadType">
+		<xs:choice>
+			<!-- Binaeres Dokument, das Base64 direkt eingebunden wird -->
+			<xs:element name="BinaryDocument">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Base64Content" type="xs:base64Binary"/>
+						<xs:element name="FileName" type="xs:token"/>
+						<xs:element name="MIMEType" type="xs:token"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<!-- Referenz auf ein Dokument, das via URL nachgeladen werden kann -->
+			<xs:element name="DocumentReference">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="URL" type="xs:anyURI"/>
+						<xs:element name="FileName" type="xs:token"/>
+						<xs:element name="MIMEType" type="xs:token"/>
+						<xs:element minOccurs="0" name="MD5Checksum" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<!-- XML basiertes Dokument -->
+			<xs:element name="XMLDocument">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="XMLContent">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:any namespace="##any" processContents="lax"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="FileName" type="xs:token"/>
+						<xs:element name="MIMEType" type="xs:token"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+	<!-- Receiver of the Ediakt Package -->
+	<xs:complexType name="ReceiverType">
+		<xs:sequence>
+			<xs:choice>
+				<xs:sequence>
+					<xs:element name="Authority" type="p:PersonDataType"/>
+					<xs:element maxOccurs="unbounded" minOccurs="0" name="Addressee" type="p:PersonDataType"/>
+				</xs:sequence>
+				<xs:element name="Person" type="p:PersonDataType"/>
+			</xs:choice>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="ReferencedObjects" type="xs:IDREF"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Metadata -->
+	<xs:complexType name="MetaDataType">
+		<xs:sequence>
+			<xs:element name="Identifier" type="edi:IdentificationType"/>
+			<xs:element minOccurs="0" name="ParentSubject" type="xs:string"/>
+			<xs:element minOccurs="0" name="Annotation" type="xs:string"/>
+			<xs:element minOccurs="0" name="Date" type="xs:dateTime"/>
+			<xs:element minOccurs="0" name="InputAnnotation" type="xs:string"/>
+			<xs:element minOccurs="0" name="Version" type="edi:VersionType"/>
+			<xs:element minOccurs="0" name="Priority" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="Closure">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Limited"/>
+						<xs:enumeration value="Confidential"/>
+						<xs:enumeration value="Secret"/>
+						<xs:enumeration value="Top Secret"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="ObjectType" type="xs:token"/>
+			<xs:element minOccurs="0" name="Editor" type="p:PersonDataType"/>
+			<xs:element minOccurs="0" name="OrganisationalUnit" type="xs:string"/>
+			<xs:element minOccurs="0" name="Closed" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="Canceled" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="Approved" type="xs:boolean"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="Term" type="edi:TermType"/>
+			<xs:element minOccurs="0" name="ReferencedIdentifier" type="edi:IdentificationType"/>
+			<xs:element minOccurs="0" name="ReceivingDate" type="xs:dateTime"/>
+			<xs:element minOccurs="0" name="ActivityType" type="xs:string"/>
+			<xs:element minOccurs="0" name="PhysicalObject" type="xs:string"/>
+			<xs:element minOccurs="0" name="CassationPeriod" type="xs:int"/>
+			<xs:element minOccurs="0" name="PlannedCassationDate" type="xs:date"/>
+			<xs:element minOccurs="0" name="ArchiveDate" type="xs:date"/>
+			<xs:element minOccurs="0" name="ArchiveAnnotation" type="xs:string"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="Receiver" type="edi:ReceiverType"/>
+			<xs:element minOccurs="0" name="Sender" type="p:PersonDataType"/>
+			<xs:element minOccurs="0" name="SendingDate" type="xs:dateTime"/>
+			<xs:element minOccurs="0" name="SendingAnnotation" type="xs:string"/>
+			<xs:element minOccurs="0" name="SendingType" type="xs:token"/>
+			<xs:element minOccurs="0" name="DeliveryDate" type="xs:dateTime"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="Keyword" type="xs:string"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="CatchWord" type="xs:string"/>
+			<xs:element minOccurs="0" name="LastChange" type="xs:dateTime"/>
+			<xs:element minOccurs="0" name="ExternalDate" type="xs:dateTime"/>
+			<xs:element minOccurs="0" name="PostmarkDate" type="xs:dateTime"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="Participants" type="edi:ParticipantsType"/>
+			<xs:element minOccurs="0" name="CreatedBy" type="p:PersonDataType"/>
+			<xs:element minOccurs="0" name="LastChangeBy" type="p:PersonDataType"/>
+			<xs:element minOccurs="0" name="SubmissionExcepted" type="xs:boolean"/>
+			<xs:element minOccurs="0" name="ApprovedBy" type="p:PersonDataType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TermType">
+		<xs:sequence>
+			<xs:element name="Date" type="xs:dateTime"/>
+			<xs:element name="Annotation" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ParticipantsType">
+		<xs:sequence>
+			<xs:element name="Participant" type="p:PersonDataType"/>
+			<xs:element name="TypeOfParticipation" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Idenitifcation Block -->
+	<xs:element name="Identification" type="edi:IdentificationType"/>
+	<xs:complexType name="IdentificationType">
+		<xs:sequence>
+			<xs:element name="Identification" type="xs:token"/>
+			<xs:element minOccurs="0" name="ManagementIndikator" type="xs:token"/>
+			<xs:element minOccurs="0" name="OrganisationalUnit" type="xs:token"/>
+			<xs:element minOccurs="0" name="SubjectArea" type="xs:token"/>
+			<xs:element minOccurs="0" name="PersonalRelation" type="p:PersonDataType"/>
+			<xs:element minOccurs="0" name="OrdinalNumber" type="xs:token"/>
+			<xs:element minOccurs="0" name="Year" type="xs:int"/>
+			<xs:element minOccurs="0" name="ObjectID" type="xs:token"/>
+			<xs:element minOccurs="0" name="SequentialNumber" type="xs:token"/>
+			<xs:element minOccurs="0" name="TechnicalID" type="xs:token"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Version -->
+	<xs:complexType name="VersionType">
+		<xs:sequence>
+			<xs:element name="VersionNumber" type="xs:token"/>
+			<xs:element name="VersionDate" type="xs:dateTime"/>
+			<xs:element minOccurs="0" name="ReferencedVersion" type="xs:IDREF"/>
+			<xs:element minOccurs="0" name="Annotation" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Elak Signature (~ Unterschrift) -->
+	<xs:complexType name="ElakSignatureType">
+		<xs:sequence>
+			<xs:element name="Issuer" type="p:PersonDataType"/>
+			<xs:element name="Date" type="xs:dateTime"/>
+			<xs:element name="Type" type="xs:token"/>
+			<xs:element minOccurs="0" name="Annotation" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- References -->
+	<xs:complexType name="ReferencesType">
+		<xs:sequence>
+			<!-- Miterledigt von -->
+			<xs:element minOccurs="0" name="FinishedBy" type="edi:IdentificationType"/>
+			<!-- ~Vorzahl -->
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="Predecessor" type="edi:IdentificationType"/>
+			<!-- ~Nachzahl -->
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="Successor" type="edi:IdentificationType"/>
+			<!-- ~Bezug -->
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="RefereTo" type="edi:IdentificationType"/>
+			<!-- ~Miterledigt -->
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="AlsoFinished" type="edi:IdentificationType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PurposeType">
+		<xs:sequence>
+			<xs:element name="Type">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="for your information"/>
+						<xs:enumeration value="for archive"/>
+						<xs:enumeration value="make a statement"/>
+						<xs:enumeration value="for handling"/>
+						<xs:enumeration value="go on working"/>
+						<xs:enumeration value="other"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element minOccurs="0" name="Annotation"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="SpecialData" type="edi:SpecialDataType"/>
+	<xs:complexType name="SpecialDataType">
+		<xs:sequence>
+			<xs:element name="XMLContent">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:any namespace="##any" processContents="lax"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="PreviewStylesheet">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:any namespace="##any" processContents="lax"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ProcessDataType">
+		<xs:sequence>
+			<xs:element name="Model">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="xpdl:Package"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element minOccurs="0" name="RunTimeInfo" type="edi:RunTimeInfoType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RunTimeInfoType">
+		<xs:sequence>
+			<xs:element maxOccurs="unbounded" name="Entry">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ActivityRef" type="xs:NMTOKEN"/>
+						<xs:element minOccurs="0" name="Person" type="xs:token"/>
+						<xs:element minOccurs="0" name="StartTime" type="xs:dateTime"/>
+						<xs:element minOccurs="0" name="EndTime" type="xs:dateTime"/>
+						<xs:element minOccurs="0" name="State">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="Processing"/>
+									<xs:enumeration value="Finished"/>
+									<xs:enumeration value="Canceled"/>
+									<xs:enumeration value="Unknown"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element minOccurs="0" name="Description" type="xs:string"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

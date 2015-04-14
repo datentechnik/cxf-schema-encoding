@@ -1,0 +1,2946 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+	<s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<insertELAKInputObject xmlns="http://reference.e-government.gv.at/namespace/elaktrans/2#">
+			<commonApplicationInputParameter>
+				<applicationSystemId>at.gv.wien.gisa</applicationSystemId>
+				<procedure>WT-GE</procedure>
+				<VKZType>L5BH-S</VKZType>
+			</commonApplicationInputParameter>
+			<purpose>INPUT</purpose>
+			<ediakt>
+				<Header xmlns="http://reference.e-government.gv.at/namespace/ediakt/20050504#">
+					<Receiver>
+						<Authority>
+							<NichtNatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+								<Identification>
+									<Value>L5BH-S</Value>
+									<Type>VKZ</Type>
+								</Identification>
+								<Identification>
+									<Value>wien1.lanadvxyz@wien.gv.at</Value>
+									<Type>UserId</Type>
+								</Identification>
+								<VollerName>Magistrat der Stadt Salzburg</VollerName>
+							</NichtNatuerlichePerson>
+						</Authority>
+					</Receiver>
+					<Sender>
+						<NichtNatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+							<Identification>
+								<Value>at.gv.wien.gisa</Value>
+								<Type>PVP-Applikation</Type>
+							</Identification>
+							<VollerName>Gewerbeinformationssystem Austria</VollerName>
+						</NichtNatuerlichePerson>
+					</Sender>
+				</Header>
+				<MetaData xmlns="http://reference.e-government.gv.at/namespace/ediakt/20050504#">
+					<Identifier>
+						<Identification />
+					</Identifier>
+				</MetaData>
+				<Payload xmlns="http://reference.e-government.gv.at/namespace/ediakt/20050504#">
+					<Layer3>
+						<Subject>Eduard Mayer2, geb. am 10.10.70
+Gemüsehandel
+Waldgasse 77/30, 1073 Wien, Österreich</Subject>
+						<MetaData>
+							<Identifier>
+								<Identification>192-2012</Identification>
+							</Identifier>
+							<ReferencedIdentifier>
+								<Identification>140821001</Identification>
+								<SequentialNumber>X123/12</SequentialNumber>
+							</ReferencedIdentifier>
+						</MetaData>
+						<Payload>
+							<Layer2>
+								<Subject>GesFall A</Subject>
+								<MetaData>
+									<Identifier>
+										<Identification>192-2012-1</Identification>
+									</Identifier>
+									<ReferencedIdentifier>
+										<Identification>140821002</Identification>
+									</ReferencedIdentifier>
+								</MetaData>
+								<Payload>
+									<Layer1>
+										<Subject>Gesamtübernahme Gewerbe
+
+BERECHTIGUNG (in Bearb.)
+Behörde: Bezirksamt X  Kurzbezeichnung: Gemüsehandel
+Wortlaut: Gemüsehandel Wortlaut UmlautTest***ÄÖÜäöüß***1
+
+EXEKUTION
+Beschreibung: Exekution A</Subject>
+										<MetaData>
+											<Identifier>
+												<Identification />
+											</Identifier>
+											<ReferencedIdentifier>
+												<Identification>140821003</Identification>
+											</ReferencedIdentifier>
+											<Receiver>
+												<Person>
+													<NatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>127</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>gbSq6CYanonymisiertzKBHO+Mw=</Value>
+															<Type>bPK:urn:publicid:gv.at:ecdid+BMI+WT</Type>
+														</Identification>
+														<Identification>
+															<Value>1234567</Value>
+															<Type>Sozialversicherungsnummer</Type>
+														</Identification>
+														<Identification>
+															<Value>3</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>3</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>freigegeben</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Inhaber</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Inhaber 3</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<PersonenName>
+															<Vorname>Eduard</Vorname>
+															<Familienname>Mayer2</Familienname>
+															<Affix position="prefix">Dr.</Affix>
+															<Affix position="suffix">MSc</Affix>
+														</PersonenName>
+														<AlternativName Type="NameVorErsterEhe">
+															<Familienname>Huber2</Familienname>
+														</AlternativName>
+														<Geschlecht>männlich</Geschlecht>
+														<Geburtsdatum>1970-10-10</Geburtsdatum>
+														<Geburtsort>Wien</Geburtsort>
+														<Geburtsstaat>Österreich</Geburtsstaat>
+														<Sterbedatum>2014-08-21</Sterbedatum>
+														<Staatsangehoerigkeit>
+															<ISOCode3>AUT</ISOCode3>
+															<StaatsnameDE>Österreich</StaatsnameDE>
+															<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#" />
+														</Staatsangehoerigkeit>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Natperson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>127</Uli>
+																<Status>0</Status>
+																<Nachsichten>
+																	<Nachsicht>
+																		<Umfang>Generalnachsicht 4</Umfang>
+																		<Fremdzahl>123/4</Fremdzahl>
+																		<Ausgestelltam>2014-08-21T00:00:00+02:00</Ausgestelltam>
+																		<Nachsichtgrund_Code>ABC4</Nachsichtgrund_Code>
+																		<Nachsichtgrund_Grund>langjährige Erfahrung</Nachsichtgrund_Grund>
+																	</Nachsicht>
+																</Nachsichten>
+															</Natperson>
+															<Inhaber xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>3</Uli>
+																<Status>0</Status>
+																<Isthistorisch>false</Isthistorisch>
+																<JurpersonUli xsi:nil="true" />
+																<NatpersonUli>127</NatpersonUli>
+																<Kontaktname>Hr. Meier</Kontaktname>
+																<Kontaktadresse>Waldstraße 3, 1234 Hof</Kontaktadresse>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Verkauf</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+															</Inhaber>
+														</GISA_Data>
+													</NatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1073</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/3</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Zustelladresse</Value>
+															<Type>Adresstyp</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1075</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/5</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>012343456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>027573456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Typ>Fax</Typ>
+														<Nummer>
+															<FormatierteNummer>012343458888</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<InternetAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Adresse>a@b.c</Adresse>
+													</InternetAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>-</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>true</Value>
+															<Type>IsFreetextAddressee</Type>
+														</Identification>
+														<Identification>
+															<Value>3</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>3</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Kontakt</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Kontakt 3</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<PersonenName>
+															<Familienname>Hr. Meier</Familienname>
+														</PersonenName>
+													</NatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Zustelladresse>
+															<Strassenname>Waldstraße 3, 1234 Hof</Strassenname>
+														</Zustelladresse>
+													</PostAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NichtNatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>218</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>334556</Value>
+															<Type>Firmenbuchnummer</Type>
+														</Identification>
+														<Identification>
+															<Value>45678</Value>
+															<Type>ZVR-Zahl</Type>
+														</Identification>
+														<Identification>
+															<Value>ztue</Value>
+															<Type>Kennzahl UR</Type>
+														</Identification>
+														<Identification>
+															<Value>3</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>3</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>in Bearbeitung</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Inhaber (in Bearb.)</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Inhaber (in Bearb.) 3</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<VollerName>Jurperson 6 GMBH</VollerName>
+														<Rechtsform>Gesellschaft mit beschränkter Haftung</Rechtsform>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Jurperson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>218</Uli>
+																<Status>1</Status>
+																<Nachsichten>
+																	<Nachsicht>
+																		<Umfang>Generalnachsicht 8</Umfang>
+																		<Fremdzahl>123/8</Fremdzahl>
+																		<Ausgestelltam>2014-08-21T00:00:00+02:00</Ausgestelltam>
+																		<Nachsichtgrund_Code>ABC8</Nachsichtgrund_Code>
+																		<Nachsichtgrund_Grund>langjährige Erfahrung</Nachsichtgrund_Grund>
+																	</Nachsicht>
+																</Nachsichten>
+															</Jurperson>
+															<Inhaber xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>3</Uli>
+																<Status>1</Status>
+																<Isthistorisch>false</Isthistorisch>
+																<JurpersonUli>218</JurpersonUli>
+																<NatpersonUli xsi:nil="true" />
+																<Kontaktname>Hr. Meier</Kontaktname>
+																<Kontaktadresse>Waldstraße 3, 1234 Hof</Kontaktadresse>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Verkauf</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+															</Inhaber>
+														</GISA_Data>
+													</NichtNatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1077</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/7</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Zustelladresse</Value>
+															<Type>Adresstyp</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1079</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/9</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>012343456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>027573456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Typ>Fax</Typ>
+														<Nummer>
+															<FormatierteNummer>012343458888</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<InternetAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Adresse>a@b.c</Adresse>
+													</InternetAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>-</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>true</Value>
+															<Type>IsFreetextAddressee</Type>
+														</Identification>
+														<Identification>
+															<Value>3</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>3</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Kontakt (in Bearb.)</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Kontakt (in Bearb.) 3</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<PersonenName>
+															<Familienname>Hr. Meier</Familienname>
+														</PersonenName>
+													</NatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Zustelladresse>
+															<Strassenname>Waldstraße 3, 1234 Hof</Strassenname>
+														</Zustelladresse>
+													</PostAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NichtNatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>244</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>334556</Value>
+															<Type>Firmenbuchnummer</Type>
+														</Identification>
+														<Identification>
+															<Value>45678</Value>
+															<Type>ZVR-Zahl</Type>
+														</Identification>
+														<Identification>
+															<Value>ztue</Value>
+															<Type>Kennzahl UR</Type>
+														</Identification>
+														<Identification>
+															<Value>3</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>512</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>freigegeben</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Firma</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Firma 3</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<Identification>
+															<Value>1</Value>
+															<Type>FortlaufendeNr</Type>
+														</Identification>
+														<VollerName>Jurperson 10 GMBH</VollerName>
+														<Rechtsform>Gesellschaft mit beschränkter Haftung</Rechtsform>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Jurperson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>244</Uli>
+																<Status>0</Status>
+																<Nachsichten>
+																	<Nachsicht>
+																		<Umfang>Generalnachsicht 12</Umfang>
+																		<Fremdzahl>123/12</Fremdzahl>
+																		<Ausgestelltam>2014-08-21T00:00:00+02:00</Ausgestelltam>
+																		<Nachsichtgrund_Code>ABC12</Nachsichtgrund_Code>
+																		<Nachsichtgrund_Grund>langjährige Erfahrung</Nachsichtgrund_Grund>
+																	</Nachsicht>
+																</Nachsichten>
+															</Jurperson>
+															<Firma xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+																<Uli>512</Uli>
+																<Status>0</Status>
+																<Isthistorisch>false</Isthistorisch>
+																<InhaberUli>3</InhaberUli>
+																<JurpersonUli>244</JurpersonUli>
+																<Fortlaufend>1</Fortlaufend>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Konkurs</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+															</Firma>
+														</GISA_Data>
+													</NichtNatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1071</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/11</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Zustelladresse</Value>
+															<Type>Adresstyp</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1071</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/13</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NichtNatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>244</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>334556</Value>
+															<Type>Firmenbuchnummer</Type>
+														</Identification>
+														<Identification>
+															<Value>45678</Value>
+															<Type>ZVR-Zahl</Type>
+														</Identification>
+														<Identification>
+															<Value>ztue</Value>
+															<Type>Kennzahl UR</Type>
+														</Identification>
+														<Identification>
+															<Value>3</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>512</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>in Bearbeitung</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Firma (in Bearb.)</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Firma (in Bearb.) 3</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<Identification>
+															<Value>1</Value>
+															<Type>FortlaufendeNr</Type>
+														</Identification>
+														<VollerName>Jurperson 14 GMBH</VollerName>
+														<Rechtsform>Gesellschaft mit beschränkter Haftung</Rechtsform>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Jurperson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>244</Uli>
+																<Status>1</Status>
+																<Nachsichten>
+																	<Nachsicht>
+																		<Umfang>Generalnachsicht 16</Umfang>
+																		<Fremdzahl>123/16</Fremdzahl>
+																		<Ausgestelltam>2014-08-21T00:00:00+02:00</Ausgestelltam>
+																		<Nachsichtgrund_Code>ABC16</Nachsichtgrund_Code>
+																		<Nachsichtgrund_Grund>langjährige Erfahrung</Nachsichtgrund_Grund>
+																	</Nachsicht>
+																</Nachsichten>
+															</Jurperson>
+															<Firma xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+																<Uli>512</Uli>
+																<Status>1</Status>
+																<Isthistorisch>false</Isthistorisch>
+																<InhaberUli>3</InhaberUli>
+																<JurpersonUli>244</JurpersonUli>
+																<Fortlaufend>1</Fortlaufend>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Konkurs</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+															</Firma>
+														</GISA_Data>
+													</NichtNatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1071</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/15</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Zustelladresse</Value>
+															<Type>Adresstyp</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1071</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/17</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NichtNatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>277</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>334556</Value>
+															<Type>Firmenbuchnummer</Type>
+														</Identification>
+														<Identification>
+															<Value>45678</Value>
+															<Type>ZVR-Zahl</Type>
+														</Identification>
+														<Identification>
+															<Value>ztue</Value>
+															<Type>Kennzahl UR</Type>
+														</Identification>
+														<Identification>
+															<Value>3</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>543</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>in Bearbeitung</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Firma (in Bearb.)</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Firma (in Bearb.) 3</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<Identification>
+															<Value>1</Value>
+															<Type>FortlaufendeNr</Type>
+														</Identification>
+														<VollerName>Jurperson 18 GMBH</VollerName>
+														<Rechtsform>Gesellschaft mit beschränkter Haftung</Rechtsform>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Jurperson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>277</Uli>
+																<Status>1</Status>
+																<Nachsichten>
+																	<Nachsicht>
+																		<Umfang>Generalnachsicht 20</Umfang>
+																		<Fremdzahl>123/20</Fremdzahl>
+																		<Ausgestelltam>2014-08-21T00:00:00+02:00</Ausgestelltam>
+																		<Nachsichtgrund_Code>ABC20</Nachsichtgrund_Code>
+																		<Nachsichtgrund_Grund>langjährige Erfahrung</Nachsichtgrund_Grund>
+																	</Nachsicht>
+																</Nachsichten>
+															</Jurperson>
+															<Firma xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="">
+																<Uli>543</Uli>
+																<Status>1</Status>
+																<Isthistorisch>false</Isthistorisch>
+																<InhaberUli>3</InhaberUli>
+																<JurpersonUli>277</JurpersonUli>
+																<Fortlaufend>1</Fortlaufend>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Konkurs</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+															</Firma>
+														</GISA_Data>
+													</NichtNatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1071</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/19</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Zustelladresse</Value>
+															<Type>Adresstyp</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1072</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/21</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>150</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>gbSq6CYanonymisiertzKBHO+Mw=</Value>
+															<Type>bPK:urn:publicid:gv.at:ecdid+BMI+WT</Type>
+														</Identification>
+														<Identification>
+															<Value>1234567</Value>
+															<Type>Sozialversicherungsnummer</Type>
+														</Identification>
+														<Identification>
+															<Value>-</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>-</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>freigegeben</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Führer</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Führer</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<PersonenName>
+															<Vorname>Eduard</Vorname>
+															<Familienname>Mayer22</Familienname>
+															<Affix position="prefix">Dr.</Affix>
+															<Affix position="suffix">MSc</Affix>
+														</PersonenName>
+														<AlternativName Type="NameVorErsterEhe">
+															<Familienname>Huber22</Familienname>
+														</AlternativName>
+														<Geschlecht>männlich</Geschlecht>
+														<Geburtsdatum>1970-10-10</Geburtsdatum>
+														<Geburtsort>Wien</Geburtsort>
+														<Geburtsstaat>Österreich</Geburtsstaat>
+														<Sterbedatum>2014-08-21</Sterbedatum>
+														<Staatsangehoerigkeit>
+															<ISOCode3>AUT</ISOCode3>
+															<StaatsnameDE>Österreich</StaatsnameDE>
+															<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#" />
+														</Staatsangehoerigkeit>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Natperson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>150</Uli>
+																<Status>0</Status>
+																<Nachsichten>
+																	<Nachsicht>
+																		<Umfang>Generalnachsicht 24</Umfang>
+																		<Fremdzahl>123/24</Fremdzahl>
+																		<Ausgestelltam>2014-08-21T00:00:00+02:00</Ausgestelltam>
+																		<Nachsichtgrund_Code>ABC24</Nachsichtgrund_Code>
+																		<Nachsichtgrund_Grund>langjährige Erfahrung</Nachsichtgrund_Grund>
+																	</Nachsicht>
+																</Nachsichten>
+															</Natperson>
+															<Fuehrer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Status>0</Status>
+																<Isthistorisch>false</Isthistorisch>
+																<NatpersonUli>150</NatpersonUli>
+																<Bestellungvon>tttt</Bestellungvon>
+																<Dienstgeberkonto>1234</Dienstgeberkonto>
+																<Svtraeger>WGKK</Svtraeger>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>xaz</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+															</Fuehrer>
+														</GISA_Data>
+													</NatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1072</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/23</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Zustelladresse</Value>
+															<Type>Adresstyp</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1072</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/25</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>012343456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>027573456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Typ>Fax</Typ>
+														<Nummer>
+															<FormatierteNummer>012343458888</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<InternetAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Adresse>a@b.c</Adresse>
+													</InternetAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>160</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>gbSq6CYanonymisiertzKBHO+Mw=</Value>
+															<Type>bPK:urn:publicid:gv.at:ecdid+BMI+WT</Type>
+														</Identification>
+														<Identification>
+															<Value>1234567</Value>
+															<Type>Sozialversicherungsnummer</Type>
+														</Identification>
+														<Identification>
+															<Value>10</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>10</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>freigegeben</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Massgebliche</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Massgebliche 10</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<Identification>
+															<Value>3</Value>
+															<Type>FortlaufendeNr</Type>
+														</Identification>
+														<PersonenName>
+															<Vorname>Eduard</Vorname>
+															<Familienname>Mayer26</Familienname>
+															<Affix position="prefix">Dr.</Affix>
+															<Affix position="suffix">MSc</Affix>
+														</PersonenName>
+														<AlternativName Type="NameVorErsterEhe">
+															<Familienname>Huber26</Familienname>
+														</AlternativName>
+														<Geschlecht>männlich</Geschlecht>
+														<Geburtsdatum>1970-10-10</Geburtsdatum>
+														<Geburtsort>Wien</Geburtsort>
+														<Geburtsstaat>Österreich</Geburtsstaat>
+														<Sterbedatum>2014-08-21</Sterbedatum>
+														<Staatsangehoerigkeit>
+															<ISOCode3>AUT</ISOCode3>
+															<StaatsnameDE>Österreich</StaatsnameDE>
+															<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#" />
+														</Staatsangehoerigkeit>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Natperson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>160</Uli>
+																<Status>0</Status>
+																<Nachsichten>
+																	<Nachsicht>
+																		<Umfang>Generalnachsicht 28</Umfang>
+																		<Fremdzahl>123/28</Fremdzahl>
+																		<Ausgestelltam>2014-08-21T00:00:00+02:00</Ausgestelltam>
+																		<Nachsichtgrund_Code>ABC28</Nachsichtgrund_Code>
+																		<Nachsichtgrund_Grund>langjährige Erfahrung</Nachsichtgrund_Grund>
+																	</Nachsicht>
+																</Nachsichten>
+															</Natperson>
+															<Massgebliche xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>10</Uli>
+																<Status>0</Status>
+																<Isthistorisch>false</Isthistorisch>
+																<NatpersonUli>160</NatpersonUli>
+																<JurpersonUli>0</JurpersonUli>
+																<Fortlaufend>3</Fortlaufend>
+																<Kontaktname>Dr. Roth</Kontaktname>
+																<Kontaktadresse>Weingasse 14, 1220 Wien</Kontaktadresse>
+																<Anmerkung>Sponsor</Anmerkung>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+															</Massgebliche>
+														</GISA_Data>
+													</NatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1072</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/27</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Zustelladresse</Value>
+															<Type>Adresstyp</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1072</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/29</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>012343456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>027573456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Typ>Fax</Typ>
+														<Nummer>
+															<FormatierteNummer>012343458888</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<InternetAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Adresse>a@b.c</Adresse>
+													</InternetAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>-</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>true</Value>
+															<Type>IsFreetextAddressee</Type>
+														</Identification>
+														<Identification>
+															<Value>10</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>10</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Kontakt</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Kontakt 10</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<PersonenName>
+															<Familienname>Dr. Roth</Familienname>
+														</PersonenName>
+													</NatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Zustelladresse>
+															<Strassenname>Weingasse 14, 1220 Wien</Strassenname>
+														</Zustelladresse>
+													</PostAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NichtNatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>-</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>true</Value>
+															<Type>IsAddress</Type>
+														</Identification>
+														<Identification>
+															<Value>-</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>-</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>in Bearbeitung</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Standort (in Bearb.)</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Standort (in Bearb.)</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<VollerName>Standort</VollerName>
+														<AlternativName>Werk 25</AlternativName>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Standort xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Status>1</Status>
+																<Alternativebezeichnung>Werk 25</Alternativebezeichnung>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Verlegung</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+																<Postadresse>
+																	<Strassenname>Waldgasse</Strassenname>
+																	<Orientierungsnummer>77/30</Orientierungsnummer>
+																	<Postleitzahl>1073</Postleitzahl>
+																	<Ortschaft>Wien</Ortschaft>
+																	<AdressregisterAgwrAdrcd>222</AdressregisterAgwrAdrcd>
+																	<AdressregisterAgwrSubcd>333</AdressregisterAgwrSubcd>
+																	<AdressregisterAgwrObjnr>444</AdressregisterAgwrObjnr>
+																	<Staat>
+																		<Staatname>Österreich</Staatname>
+																		<Gwrcode>abc</Gwrcode>
+																		<Isocode3>AUT</Isocode3>
+																		<Euewr>true</Euewr>
+																	</Staat>
+																	<Gemeinde_Gemeindename>Wien</Gemeinde_Gemeindename>
+																	<Katastralgemeinde>90001</Katastralgemeinde>
+																	<Grundstuecknr>536/333</Grundstuecknr>
+																</Postadresse>
+															</Standort>
+														</GISA_Data>
+													</NichtNatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1073</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/30</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>120</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>gbSq6CYanonymisiertzKBHO+Mw=</Value>
+															<Type>bPK:urn:publicid:gv.at:ecdid+BMI+WT</Type>
+														</Identification>
+														<Identification>
+															<Value>1234567</Value>
+															<Type>Sozialversicherungsnummer</Type>
+														</Identification>
+														<Identification>
+															<Value>601</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>601</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>freigegeben</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Fortbetrieb</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Fortbetrieb 601</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<Identification>
+															<Value>33</Value>
+															<Type>FortlaufendeNr</Type>
+														</Identification>
+														<PersonenName>
+															<Vorname>Eduard</Vorname>
+															<Familienname>Mayer31</Familienname>
+															<Affix position="prefix">Dr.</Affix>
+															<Affix position="suffix">MSc</Affix>
+														</PersonenName>
+														<AlternativName Type="NameVorErsterEhe">
+															<Familienname>Huber31</Familienname>
+														</AlternativName>
+														<Geschlecht>männlich</Geschlecht>
+														<Geburtsdatum>1970-10-10</Geburtsdatum>
+														<Geburtsort>Wien</Geburtsort>
+														<Geburtsstaat>Österreich</Geburtsstaat>
+														<Sterbedatum>2014-08-21</Sterbedatum>
+														<Staatsangehoerigkeit>
+															<ISOCode3>AUT</ISOCode3>
+															<StaatsnameDE>Österreich</StaatsnameDE>
+															<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#" />
+														</Staatsangehoerigkeit>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Natperson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>120</Uli>
+																<Status>0</Status>
+																<Nachsichten>
+																	<Nachsicht>
+																		<Umfang>Generalnachsicht 33</Umfang>
+																		<Fremdzahl>123/33</Fremdzahl>
+																		<Ausgestelltam>2014-08-21T00:00:00+02:00</Ausgestelltam>
+																		<Nachsichtgrund_Code>ABC33</Nachsichtgrund_Code>
+																		<Nachsichtgrund_Grund>langjährige Erfahrung</Nachsichtgrund_Grund>
+																	</Nachsicht>
+																</Nachsichten>
+															</Natperson>
+															<Fortbetrieb xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>601</Uli>
+																<Status>0</Status>
+																<Isthistorisch>false</Isthistorisch>
+																<NatpersonUli>120</NatpersonUli>
+																<JurpersonUli>0</JurpersonUli>
+																<Fortlaufend>33</Fortlaufend>
+																<Kontaktname>Fr. Hiesmayer</Kontaktname>
+																<Kontaktadresse>Sterngasse 1, 2929 XXX</Kontaktadresse>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Verkauf</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+																<Fortbetriebgrund_Bezeichnung>Vererbung</Fortbetriebgrund_Bezeichnung>
+															</Fortbetrieb>
+														</GISA_Data>
+													</NatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1073</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/32</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Zustelladresse</Value>
+															<Type>Adresstyp</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1073</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/34</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>012343456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>027573456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Typ>Fax</Typ>
+														<Nummer>
+															<FormatierteNummer>012343458888</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<InternetAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Adresse>a@b.c</Adresse>
+													</InternetAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>-</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>true</Value>
+															<Type>IsFreetextAddressee</Type>
+														</Identification>
+														<Identification>
+															<Value>601</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>601</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Kontakt</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Kontakt 601</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<PersonenName>
+															<Familienname>Fr. Hiesmayer</Familienname>
+														</PersonenName>
+													</NatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Zustelladresse>
+															<Strassenname>Sterngasse 1, 2929 XXX</Strassenname>
+														</Zustelladresse>
+													</PostAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>120</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>gbSq6CYanonymisiertzKBHO+Mw=</Value>
+															<Type>bPK:urn:publicid:gv.at:ecdid+BMI+WT</Type>
+														</Identification>
+														<Identification>
+															<Value>1234567</Value>
+															<Type>Sozialversicherungsnummer</Type>
+														</Identification>
+														<Identification>
+															<Value>601</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>-</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>freigegeben</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Fortbetriebführer</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Fortbetriebführer 601</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<PersonenName>
+															<Vorname>Eduard</Vorname>
+															<Familienname>Mayer35</Familienname>
+															<Affix position="prefix">Dr.</Affix>
+															<Affix position="suffix">MSc</Affix>
+														</PersonenName>
+														<AlternativName Type="NameVorErsterEhe">
+															<Familienname>Huber35</Familienname>
+														</AlternativName>
+														<Geschlecht>männlich</Geschlecht>
+														<Geburtsdatum>1970-10-10</Geburtsdatum>
+														<Geburtsort>Wien</Geburtsort>
+														<Geburtsstaat>Österreich</Geburtsstaat>
+														<Sterbedatum>2014-08-21</Sterbedatum>
+														<Staatsangehoerigkeit>
+															<ISOCode3>AUT</ISOCode3>
+															<StaatsnameDE>Österreich</StaatsnameDE>
+															<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#" />
+														</Staatsangehoerigkeit>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Natperson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>120</Uli>
+																<Status>0</Status>
+																<Nachsichten>
+																	<Nachsicht>
+																		<Umfang>Generalnachsicht 37</Umfang>
+																		<Fremdzahl>123/37</Fremdzahl>
+																		<Ausgestelltam>2014-08-21T00:00:00+02:00</Ausgestelltam>
+																		<Nachsichtgrund_Code>ABC37</Nachsichtgrund_Code>
+																		<Nachsichtgrund_Grund>langjährige Erfahrung</Nachsichtgrund_Grund>
+																	</Nachsicht>
+																</Nachsichten>
+															</Natperson>
+															<Fortbetriebfuehrer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Status>0</Status>
+																<Isthistorisch>false</Isthistorisch>
+																<FortbetriebUli>601</FortbetriebUli>
+																<NatpersonUli>120</NatpersonUli>
+																<Bestellungvon>fdf</Bestellungvon>
+																<Dienstgeberkonto>123</Dienstgeberkonto>
+																<Svtraeger>GKK</Svtraeger>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Versetzung</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+															</Fortbetriebfuehrer>
+														</GISA_Data>
+													</NatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1073</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/36</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Zustelladresse</Value>
+															<Type>Adresstyp</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1073</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/38</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>012343456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>027573456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Typ>Fax</Typ>
+														<Nummer>
+															<FormatierteNummer>012343458888</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<InternetAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Adresse>a@b.c</Adresse>
+													</InternetAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>115</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>gbSq6CYanonymisiertzKBHO+Mw=</Value>
+															<Type>bPK:urn:publicid:gv.at:ecdid+BMI+WT</Type>
+														</Identification>
+														<Identification>
+															<Value>1234567</Value>
+															<Type>Sozialversicherungsnummer</Type>
+														</Identification>
+														<Identification>
+															<Value>601</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>-</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>in Bearbeitung</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Fortbetriebführer (in Bearb.)</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Fortbetriebführer (in Bearb.) 601</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<PersonenName>
+															<Vorname>Eduard</Vorname>
+															<Familienname>Mayer39</Familienname>
+															<Affix position="prefix">Dr.</Affix>
+															<Affix position="suffix">MSc</Affix>
+														</PersonenName>
+														<AlternativName Type="NameVorErsterEhe">
+															<Familienname>Huber39</Familienname>
+														</AlternativName>
+														<Geschlecht>männlich</Geschlecht>
+														<Geburtsdatum>1970-10-10</Geburtsdatum>
+														<Geburtsort>Wien</Geburtsort>
+														<Geburtsstaat>Österreich</Geburtsstaat>
+														<Sterbedatum>2014-08-21</Sterbedatum>
+														<Staatsangehoerigkeit>
+															<ISOCode3>AUT</ISOCode3>
+															<StaatsnameDE>Österreich</StaatsnameDE>
+															<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#" />
+														</Staatsangehoerigkeit>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Natperson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>115</Uli>
+																<Status>1</Status>
+																<Nachsichten>
+																	<Nachsicht>
+																		<Umfang>Generalnachsicht 41</Umfang>
+																		<Fremdzahl>123/41</Fremdzahl>
+																		<Ausgestelltam>2014-08-21T00:00:00+02:00</Ausgestelltam>
+																		<Nachsichtgrund_Code>ABC41</Nachsichtgrund_Code>
+																		<Nachsichtgrund_Grund>langjährige Erfahrung</Nachsichtgrund_Grund>
+																	</Nachsicht>
+																</Nachsichten>
+															</Natperson>
+															<Fortbetriebfuehrer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Status>1</Status>
+																<Isthistorisch>false</Isthistorisch>
+																<FortbetriebUli>601</FortbetriebUli>
+																<NatpersonUli>115</NatpersonUli>
+																<Bestellungvon>fdf</Bestellungvon>
+																<Dienstgeberkonto>123</Dienstgeberkonto>
+																<Svtraeger>GKK</Svtraeger>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Versetzung</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+															</Fortbetriebfuehrer>
+														</GISA_Data>
+													</NatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1074</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/40</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Zustelladresse</Value>
+															<Type>Adresstyp</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1074</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/42</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>012343456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>027573456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Typ>Fax</Typ>
+														<Nummer>
+															<FormatierteNummer>012343458888</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<InternetAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Adresse>a@b.c</Adresse>
+													</InternetAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>121</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>gbSq6CYanonymisiertzKBHO+Mw=</Value>
+															<Type>bPK:urn:publicid:gv.at:ecdid+BMI+WT</Type>
+														</Identification>
+														<Identification>
+															<Value>1234567</Value>
+															<Type>Sozialversicherungsnummer</Type>
+														</Identification>
+														<Identification>
+															<Value>701</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>701</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>freigegeben</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Pächter</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Pächter 701</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<PersonenName>
+															<Vorname>Eduard</Vorname>
+															<Familienname>Mayer43</Familienname>
+															<Affix position="prefix">Dr.</Affix>
+															<Affix position="suffix">MSc</Affix>
+														</PersonenName>
+														<AlternativName Type="NameVorErsterEhe">
+															<Familienname>Huber43</Familienname>
+														</AlternativName>
+														<Geschlecht>männlich</Geschlecht>
+														<Geburtsdatum>1970-10-10</Geburtsdatum>
+														<Geburtsort>Wien</Geburtsort>
+														<Geburtsstaat>Österreich</Geburtsstaat>
+														<Sterbedatum>2014-08-21</Sterbedatum>
+														<Staatsangehoerigkeit>
+															<ISOCode3>AUT</ISOCode3>
+															<StaatsnameDE>Österreich</StaatsnameDE>
+															<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#" />
+														</Staatsangehoerigkeit>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Natperson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>121</Uli>
+																<Status>0</Status>
+																<Nachsichten>
+																	<Nachsicht>
+																		<Umfang>Generalnachsicht 45</Umfang>
+																		<Fremdzahl>123/45</Fremdzahl>
+																		<Ausgestelltam>2014-08-21T00:00:00+02:00</Ausgestelltam>
+																		<Nachsichtgrund_Code>ABC45</Nachsichtgrund_Code>
+																		<Nachsichtgrund_Grund>langjährige Erfahrung</Nachsichtgrund_Grund>
+																	</Nachsicht>
+																</Nachsichten>
+															</Natperson>
+															<Paechter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>701</Uli>
+																<Status>0</Status>
+																<Isthistorisch>false</Isthistorisch>
+																<JurpersonUli>0</JurpersonUli>
+																<NatpersonUli>121</NatpersonUli>
+																<Kontaktname>Hr. Hausmann</Kontaktname>
+																<Kontaktadresse>Wassersteig 2, 27438 Steigen</Kontaktadresse>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Verkauf</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+															</Paechter>
+														</GISA_Data>
+													</NatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1074</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/44</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Zustelladresse</Value>
+															<Type>Adresstyp</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1074</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/46</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>012343456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>027573456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Typ>Fax</Typ>
+														<Nummer>
+															<FormatierteNummer>012343458888</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<InternetAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Adresse>a@b.c</Adresse>
+													</InternetAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>-</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>true</Value>
+															<Type>IsFreetextAddressee</Type>
+														</Identification>
+														<Identification>
+															<Value>701</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>701</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Kontakt</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Kontakt 701</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<PersonenName>
+															<Familienname>Hr. Hausmann</Familienname>
+														</PersonenName>
+													</NatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Zustelladresse>
+															<Strassenname>Wassersteig 2, 27438 Steigen</Strassenname>
+														</Zustelladresse>
+													</PostAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NichtNatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>230</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>334556</Value>
+															<Type>Firmenbuchnummer</Type>
+														</Identification>
+														<Identification>
+															<Value>45678</Value>
+															<Type>ZVR-Zahl</Type>
+														</Identification>
+														<Identification>
+															<Value>ztue</Value>
+															<Type>Kennzahl UR</Type>
+														</Identification>
+														<Identification>
+															<Value>701</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>701</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>in Bearbeitung</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Pächter (in Bearb.)</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Pächter (in Bearb.) 701</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<VollerName>Jurperson 47 GMBH</VollerName>
+														<Rechtsform>Gesellschaft mit beschränkter Haftung</Rechtsform>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Jurperson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>230</Uli>
+																<Status>1</Status>
+																<Nachsichten>
+																	<Nachsicht>
+																		<Umfang>Generalnachsicht 49</Umfang>
+																		<Fremdzahl>123/49</Fremdzahl>
+																		<Ausgestelltam>2014-08-21T00:00:00+02:00</Ausgestelltam>
+																		<Nachsichtgrund_Code>ABC49</Nachsichtgrund_Code>
+																		<Nachsichtgrund_Grund>langjährige Erfahrung</Nachsichtgrund_Grund>
+																	</Nachsicht>
+																</Nachsichten>
+															</Jurperson>
+															<Paechter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>701</Uli>
+																<Status>1</Status>
+																<Isthistorisch>false</Isthistorisch>
+																<JurpersonUli>230</JurpersonUli>
+																<NatpersonUli>0</NatpersonUli>
+																<Kontaktname>Hr. Hausmann</Kontaktname>
+																<Kontaktadresse>Wassersteig 2, 27438 Steigen</Kontaktadresse>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Verkauf</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+															</Paechter>
+														</GISA_Data>
+													</NichtNatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1074</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/48</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Zustelladresse</Value>
+															<Type>Adresstyp</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1075</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/50</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>012343456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>027573456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Typ>Fax</Typ>
+														<Nummer>
+															<FormatierteNummer>012343458888</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<InternetAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Adresse>a@b.c</Adresse>
+													</InternetAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>-</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>true</Value>
+															<Type>IsFreetextAddressee</Type>
+														</Identification>
+														<Identification>
+															<Value>701</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>701</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Kontakt (in Bearb.)</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Kontakt (in Bearb.) 701</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<PersonenName>
+															<Familienname>Hr. Hausmann</Familienname>
+														</PersonenName>
+													</NatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Zustelladresse>
+															<Strassenname>Wassersteig 2, 27438 Steigen</Strassenname>
+														</Zustelladresse>
+													</PostAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>130</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>gbSq6CYanonymisiertzKBHO+Mw=</Value>
+															<Type>bPK:urn:publicid:gv.at:ecdid+BMI+WT</Type>
+														</Identification>
+														<Identification>
+															<Value>1234567</Value>
+															<Type>Sozialversicherungsnummer</Type>
+														</Identification>
+														<Identification>
+															<Value>701</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>-</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>freigegeben</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Pächterführer</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Pächterführer 701</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<PersonenName>
+															<Vorname>Eduard</Vorname>
+															<Familienname>Mayer51</Familienname>
+															<Affix position="prefix">Dr.</Affix>
+															<Affix position="suffix">MSc</Affix>
+														</PersonenName>
+														<AlternativName Type="NameVorErsterEhe">
+															<Familienname>Huber51</Familienname>
+														</AlternativName>
+														<Geschlecht>männlich</Geschlecht>
+														<Geburtsdatum>1970-10-10</Geburtsdatum>
+														<Geburtsort>Wien</Geburtsort>
+														<Geburtsstaat>Österreich</Geburtsstaat>
+														<Sterbedatum>2014-08-21</Sterbedatum>
+														<Staatsangehoerigkeit>
+															<ISOCode3>AUT</ISOCode3>
+															<StaatsnameDE>Österreich</StaatsnameDE>
+															<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#" />
+														</Staatsangehoerigkeit>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Natperson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>130</Uli>
+																<Status>0</Status>
+																<Nachsichten>
+																	<Nachsicht>
+																		<Umfang>Generalnachsicht 53</Umfang>
+																		<Fremdzahl>123/53</Fremdzahl>
+																		<Ausgestelltam>2014-08-21T00:00:00+02:00</Ausgestelltam>
+																		<Nachsichtgrund_Code>ABC53</Nachsichtgrund_Code>
+																		<Nachsichtgrund_Grund>langjährige Erfahrung</Nachsichtgrund_Grund>
+																	</Nachsicht>
+																</Nachsichten>
+															</Natperson>
+															<Paechterfuehrer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Status>0</Status>
+																<Isthistorisch>false</Isthistorisch>
+																<PaechterUli>701</PaechterUli>
+																<NatpersonUli>130</NatpersonUli>
+																<Bestellungvon>eue</Bestellungvon>
+																<Dienstgeberkonto>3445</Dienstgeberkonto>
+																<Svtraeger>GKK</Svtraeger>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Versetzung</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+															</Paechterfuehrer>
+														</GISA_Data>
+													</NatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1075</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/52</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Zustelladresse</Value>
+															<Type>Adresstyp</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1075</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/54</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>012343456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>027573456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Typ>Fax</Typ>
+														<Nummer>
+															<FormatierteNummer>012343458888</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<InternetAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Adresse>a@b.c</Adresse>
+													</InternetAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NichtNatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>1201</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>true</Value>
+															<Type>IsAddress</Type>
+														</Identification>
+														<Identification>
+															<Value>1201</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>1201</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>freigegeben</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Integrierter</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Integrierter 1201</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<Identification>
+															<Value>33</Value>
+															<Type>FortlaufendeNr</Type>
+														</Identification>
+														<VollerName>IB Hernals</VollerName>
+														<AlternativName>Integrierter 33</AlternativName>
+														<AlternativName>IBH</AlternativName>
+														<AlternativName>Außenstelle Hernals</AlternativName>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Integrierter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>1201</Uli>
+																<Status>0</Status>
+																<Wortlaut>IB Hernals</Wortlaut>
+																<Kurzbezeichnung>IBH</Kurzbezeichnung>
+																<Alternativebezeichnung>Außenstelle Hernals</Alternativebezeichnung>
+																<Fortlaufend>33</Fortlaufend>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Verkauf</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+																<Schluessel_Kennzahl>2929</Schluessel_Kennzahl>
+																<Postadresse>
+																	<Strassenname>Waldgasse</Strassenname>
+																	<Orientierungsnummer>77/65</Orientierungsnummer>
+																	<Postleitzahl>1076</Postleitzahl>
+																	<Ortschaft>Wien</Ortschaft>
+																	<AdressregisterAgwrAdrcd>222</AdressregisterAgwrAdrcd>
+																	<AdressregisterAgwrSubcd>333</AdressregisterAgwrSubcd>
+																	<AdressregisterAgwrObjnr>444</AdressregisterAgwrObjnr>
+																	<Staat>
+																		<Staatname>Österreich</Staatname>
+																		<Gwrcode>abc</Gwrcode>
+																		<Isocode3>AUT</Isocode3>
+																		<Euewr>true</Euewr>
+																	</Staat>
+																	<Gemeinde_Gemeindename>Wien</Gemeinde_Gemeindename>
+																	<Katastralgemeinde>90001</Katastralgemeinde>
+																	<Grundstuecknr>536/333</Grundstuecknr>
+																</Postadresse>
+															</Integrierter>
+														</GISA_Data>
+													</NichtNatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1076</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/65</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>128</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>gbSq6CYanonymisiertzKBHO+Mw=</Value>
+															<Type>bPK:urn:publicid:gv.at:ecdid+BMI+WT</Type>
+														</Identification>
+														<Identification>
+															<Value>1234567</Value>
+															<Type>Sozialversicherungsnummer</Type>
+														</Identification>
+														<Identification>
+															<Value>1201</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>-</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>freigegeben</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Befähigter</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Befähigter 1201</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<PersonenName>
+															<Vorname>Eduard</Vorname>
+															<Familienname>Mayer66</Familienname>
+															<Affix position="prefix">Dr.</Affix>
+															<Affix position="suffix">MSc</Affix>
+														</PersonenName>
+														<AlternativName Type="NameVorErsterEhe">
+															<Familienname>Huber66</Familienname>
+														</AlternativName>
+														<Geschlecht>männlich</Geschlecht>
+														<Geburtsdatum>1970-10-10</Geburtsdatum>
+														<Geburtsort>Wien</Geburtsort>
+														<Geburtsstaat>Österreich</Geburtsstaat>
+														<Sterbedatum>2014-08-21</Sterbedatum>
+														<Staatsangehoerigkeit>
+															<ISOCode3>AUT</ISOCode3>
+															<StaatsnameDE>Österreich</StaatsnameDE>
+															<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#" />
+														</Staatsangehoerigkeit>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Natperson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>128</Uli>
+																<Status>0</Status>
+																<Nachsichten>
+																	<Nachsicht>
+																		<Umfang>Generalnachsicht 68</Umfang>
+																		<Fremdzahl>123/68</Fremdzahl>
+																		<Ausgestelltam>2014-08-21T00:00:00+02:00</Ausgestelltam>
+																		<Nachsichtgrund_Code>ABC68</Nachsichtgrund_Code>
+																		<Nachsichtgrund_Grund>langjährige Erfahrung</Nachsichtgrund_Grund>
+																	</Nachsicht>
+																</Nachsichten>
+															</Natperson>
+															<Befaehigter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Status>0</Status>
+																<Isthistorisch>false</Isthistorisch>
+																<IntegrierterUli>1201</IntegrierterUli>
+																<NatpersonUli>128</NatpersonUli>
+																<Bestellungvon>xxx</Bestellungvon>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Versetzung</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+															</Befaehigter>
+														</GISA_Data>
+													</NatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1076</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/67</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Zustelladresse</Value>
+															<Type>Adresstyp</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1076</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/69</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>012343456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>027573456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Typ>Fax</Typ>
+														<Nummer>
+															<FormatierteNummer>012343458888</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<InternetAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Adresse>a@b.c</Adresse>
+													</InternetAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NichtNatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>734</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>334556</Value>
+															<Type>Firmenbuchnummer</Type>
+														</Identification>
+														<Identification>
+															<Value>45678</Value>
+															<Type>ZVR-Zahl</Type>
+														</Identification>
+														<Identification>
+															<Value>ztue</Value>
+															<Type>Kennzahl UR</Type>
+														</Identification>
+														<Identification>
+															<Value>1001</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>1001</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>freigegeben</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Vermittler</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Vermittler 1001</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<Identification>
+															<Value>1</Value>
+															<Type>FortlaufendeNr</Type>
+														</Identification>
+														<VollerName>Jurperson 70 GMBH</VollerName>
+														<Rechtsform>Gesellschaft mit beschränkter Haftung</Rechtsform>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Jurperson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>734</Uli>
+																<Status>0</Status>
+																<Nachsichten>
+																	<Nachsicht>
+																		<Umfang>Generalnachsicht 72</Umfang>
+																		<Fremdzahl>123/72</Fremdzahl>
+																		<Ausgestelltam>2014-08-21T00:00:00+02:00</Ausgestelltam>
+																		<Nachsichtgrund_Code>ABC72</Nachsichtgrund_Code>
+																		<Nachsichtgrund_Grund>langjährige Erfahrung</Nachsichtgrund_Grund>
+																	</Nachsicht>
+																</Nachsichten>
+															</Jurperson>
+															<Vermittler xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>1001</Uli>
+																<Status>0</Status>
+																<Isthistorisch>false</Isthistorisch>
+																<JurpersonUli>734</JurpersonUli>
+																<Fortlaufend>1</Fortlaufend>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Konkurs</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+																<Verhaeltnistyp>
+																	<Code>7</Code>
+																	<Bezeichnung>Haftpflichversicherung für Versicherungsvermittler</Bezeichnung>
+																	<Kurzbezeichnung>HV-VV</Kurzbezeichnung>
+																</Verhaeltnistyp>
+															</Vermittler>
+														</GISA_Data>
+													</NichtNatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1077</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/71</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Zustelladresse</Value>
+															<Type>Adresstyp</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1077</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/73</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NichtNatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>801</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>true</Value>
+															<Type>IsAddress</Type>
+														</Identification>
+														<Identification>
+															<Value>801</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>801</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>freigegeben</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Ausländische</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Ausländische 801</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<Identification>
+															<Value>33</Value>
+															<Type>FortlaufendeNr</Type>
+														</Identification>
+														<VollerName>Ausländische 33</VollerName>
+														<AlternativName>Außenstelle Hernals</AlternativName>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Auslaendische xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>801</Uli>
+																<Status>0</Status>
+																<Alternativebezeichnung>Außenstelle Hernals</Alternativebezeichnung>
+																<Fortlaufend>33</Fortlaufend>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Verkauf</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+																<Postadresse>
+																	<Strassenname>Waldgasse</Strassenname>
+																	<Orientierungsnummer>77/74</Orientierungsnummer>
+																	<Postleitzahl>1077</Postleitzahl>
+																	<Ortschaft>Wien</Ortschaft>
+																	<AdressregisterAgwrAdrcd>222</AdressregisterAgwrAdrcd>
+																	<AdressregisterAgwrSubcd>333</AdressregisterAgwrSubcd>
+																	<AdressregisterAgwrObjnr>444</AdressregisterAgwrObjnr>
+																	<Staat>
+																		<Staatname>Österreich</Staatname>
+																		<Gwrcode>abc</Gwrcode>
+																		<Isocode3>AUT</Isocode3>
+																		<Euewr>true</Euewr>
+																	</Staat>
+																	<Gemeinde_Gemeindename>Wien</Gemeinde_Gemeindename>
+																	<Katastralgemeinde>90001</Katastralgemeinde>
+																	<Grundstuecknr>536/333</Grundstuecknr>
+																</Postadresse>
+															</Auslaendische>
+														</GISA_Data>
+													</NichtNatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1077</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/74</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+												</Person>
+											</Receiver>
+											<Receiver>
+												<Person>
+													<NatuerlichePerson xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>188</Value>
+															<Type>IdentifikationsNr</Type>
+														</Identification>
+														<Identification>
+															<Value>gbSq6CYanonymisiertzKBHO+Mw=</Value>
+															<Type>bPK:urn:publicid:gv.at:ecdid+BMI+WT</Type>
+														</Identification>
+														<Identification>
+															<Value>1234567</Value>
+															<Type>Sozialversicherungsnummer</Type>
+														</Identification>
+														<Identification>
+															<Value>801</Value>
+															<Type>BlockNr</Type>
+														</Identification>
+														<Identification>
+															<Value>-</Value>
+															<Type>HuellenobjektNr</Type>
+														</Identification>
+														<Identification>
+															<Value>freigegeben</Value>
+															<Type>Status</Type>
+														</Identification>
+														<Identification>
+															<Value>Repräsentant</Value>
+															<Type>Art der Beteiligung</Type>
+														</Identification>
+														<Identification>
+															<Value>Repräsentant 801</Value>
+															<Type>Bemerkung</Type>
+														</Identification>
+														<PersonenName>
+															<Vorname>Eduard</Vorname>
+															<Familienname>Mayer75</Familienname>
+															<Affix position="prefix">Dr.</Affix>
+															<Affix position="suffix">MSc</Affix>
+														</PersonenName>
+														<AlternativName Type="NameVorErsterEhe">
+															<Familienname>Huber75</Familienname>
+														</AlternativName>
+														<Geschlecht>männlich</Geschlecht>
+														<Geburtsdatum>1970-10-10</Geburtsdatum>
+														<Geburtsort>Wien</Geburtsort>
+														<Geburtsstaat>Österreich</Geburtsstaat>
+														<Sterbedatum>2014-08-21</Sterbedatum>
+														<Staatsangehoerigkeit>
+															<ISOCode3>AUT</ISOCode3>
+															<StaatsnameDE>Österreich</StaatsnameDE>
+															<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#" />
+														</Staatsangehoerigkeit>
+														<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+															<Natperson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Uli>188</Uli>
+																<Status>0</Status>
+																<Nachsichten>
+																	<Nachsicht>
+																		<Umfang>Generalnachsicht 77</Umfang>
+																		<Fremdzahl>123/77</Fremdzahl>
+																		<Ausgestelltam>2014-08-21T00:00:00+02:00</Ausgestelltam>
+																		<Nachsichtgrund_Code>ABC77</Nachsichtgrund_Code>
+																		<Nachsichtgrund_Grund>langjährige Erfahrung</Nachsichtgrund_Grund>
+																	</Nachsicht>
+																</Nachsichten>
+															</Natperson>
+															<Repraesentant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/persondata/specialdata/gisa/20140307#">
+																<Status>0</Status>
+																<Isthistorisch>false</Isthistorisch>
+																<AuslaendischeUli>801</AuslaendischeUli>
+																<NatpersonUli>188</NatpersonUli>
+																<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+																<Endigunggrund>Versetzung</Endigunggrund>
+																<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+																<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+																<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+																<Lmuser>MusterUser</Lmuser>
+															</Repraesentant>
+														</GISA_Data>
+													</NatuerlichePerson>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1077</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/76</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<PostAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Identification>
+															<Value>536/333</Value>
+															<Type>GrundstueckNr</Type>
+														</Identification>
+														<Identification>
+															<Value>Zustelladresse</Value>
+															<Type>Adresstyp</Type>
+														</Identification>
+														<Staatscode>AUT</Staatscode>
+														<Staatsname>Österreich</Staatsname>
+														<Postleitzahl>1077</Postleitzahl>
+														<Gemeinde>Wien</Gemeinde>
+														<Gemeindekennziffer>90001</Gemeindekennziffer>
+														<Ortschaft>Wien</Ortschaft>
+														<Zustelladresse>
+															<Strassenname>Waldgasse</Strassenname>
+															<Orientierungsnummer>77/78</Orientierungsnummer>
+															<AdressRegisterEintrag>
+																<Adresscode>222</Adresscode>
+																<Subcode>333</Subcode>
+																<Objektnummer>444</Objektnummer>
+															</AdressRegisterEintrag>
+														</Zustelladresse>
+													</PostAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>012343456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Nummer>
+															<FormatierteNummer>027573456363</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<TelefonAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Typ>Fax</Typ>
+														<Nummer>
+															<FormatierteNummer>012343458888</FormatierteNummer>
+														</Nummer>
+													</TelefonAdresse>
+													<InternetAdresse xmlns="http://reference.e-government.gv.at/namespace/persondata/20020228#">
+														<Adresse>a@b.c</Adresse>
+													</InternetAdresse>
+												</Person>
+											</Receiver>
+										</MetaData>
+										<BusinessType>GESAMTUEBERNAHME</BusinessType>
+										<SpecialData>
+											<XMLContent>
+												<GISA_Data xmlns="http://reference.e-government.gv.at/namespace/ediakt/specialdata/gisa/20140307#">
+													<Liste_Berechtigungen>
+														<Berechtigung xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/ediakt/specialdata/gisa/20140307#">
+															<Behoerde>Bezirksamt X</Behoerde>
+															<Wortlaut>Gemüsehandel Wortlaut UmlautTest***ÄÖÜäöüß***1</Wortlaut>
+															<Kurzbezeichnung>Gemüsehandel</Kurzbezeichnung>
+															<Fremdzahl>455/533</Fremdzahl>
+															<Veranstalternr>44-K</Veranstalternr>
+															<Ruhendvon>2014-08-21T00:00:00+02:00</Ruhendvon>
+															<Ruhendbis>2014-08-21T00:00:00+02:00</Ruhendbis>
+															<Entziehungvon>2014-08-21T00:00:00+02:00</Entziehungvon>
+															<Entziehungbis>2014-08-21T00:00:00+02:00</Entziehungbis>
+															<AusgestelltAm>2014-08-21T00:00:00+02:00</AusgestelltAm>
+															<AusgestelltBehoerde>Finanzamt Y</AusgestelltBehoerde>
+															<Immobilienmakler_ruhendvon xsi:nil="true" />
+															<Immobilienmakler_ruhendbis xsi:nil="true" />
+															<Immobilienverwalter_ruhendvon>2014-08-21T00:00:00+02:00</Immobilienverwalter_ruhendvon>
+															<Immobilienverwalter_ruhendbis>2014-08-21T00:00:00+02:00</Immobilienverwalter_ruhendbis>
+															<Immobilienbautraeger_ruhendvon>2014-08-21T00:00:00+02:00</Immobilienbautraeger_ruhendvon>
+															<Immobilienbautraeger_ruhendbis>2014-08-21T00:00:00+02:00</Immobilienbautraeger_ruhendbis>
+															<IstIndustriebetrieb>true</IstIndustriebetrieb>
+															<IstEntziehung>false</IstEntziehung>
+															<IstRuhend>true</IstRuhend>
+															<NeuFoeg>false</NeuFoeg>
+															<Endigungdatum>2014-08-21T00:00:00+02:00</Endigungdatum>
+															<Endigunggrund>08 - Endigung der Gewerbeberechtigung (Wortlauterweiterung oder -einschränkung)</Endigunggrund>
+															<Rechtswirksamab>2014-08-21T00:00:00+02:00</Rechtswirksamab>
+															<Geaendertam>2014-08-21T00:00:00+02:00</Geaendertam>
+															<Status>1</Status>
+															<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+															<Lmuser>MusterUser</Lmuser>
+															<Schluessel_Kennzahl>12234</Schluessel_Kennzahl>
+														</Berechtigung>
+													</Liste_Berechtigungen>
+													<Liste_Exekutionen>
+														<Exekution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://reference.e-government.gv.at/namespace/ediakt/specialdata/gisa/20140307#">
+															<Beschreibung>Exekution A</Beschreibung>
+															<Datum>2014-08-21T00:00:00+02:00</Datum>
+															<Lmdatum>2014-08-21T00:00:00+02:00</Lmdatum>
+															<Lmuser>MusterUser</Lmuser>
+														</Exekution>
+													</Liste_Exekutionen>
+												</GISA_Data>
+											</XMLContent>
+										</SpecialData>
+									</Layer1>
+								</Payload>
+							</Layer2>
+						</Payload>
+					</Layer3>
+				</Payload>
+			</ediakt>
+		</insertELAKInputObject>
+	</s:Body>
+</s:Envelope>

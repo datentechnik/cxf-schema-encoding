@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.wfmc.org/2002/XPDL1.0" xmlns:xpdl="http://www.wfmc.org/2002/XPDL1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <xsd:element name="Activities">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="xpdl:Activity"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Activity">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element minOccurs="0" ref="xpdl:Description"/>
+            <xsd:element minOccurs="0" ref="xpdl:Limit"/>
+            <xsd:choice>
+               <xsd:element ref="xpdl:Route"/>
+               <xsd:element ref="xpdl:Implementation"/>
+               <xsd:element ref="xpdl:BlockActivity"/>
+            </xsd:choice>
+            <xsd:element minOccurs="0" ref="xpdl:Performer"/>
+            <xsd:element minOccurs="0" ref="xpdl:StartMode"/>
+            <xsd:element minOccurs="0" ref="xpdl:FinishMode"/>
+            <xsd:element minOccurs="0" ref="xpdl:Priority"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="xpdl:Deadline"/>
+            <xsd:element minOccurs="0" ref="xpdl:SimulationInformation"/>
+            <xsd:element minOccurs="0" ref="xpdl:Icon"/>
+            <xsd:element minOccurs="0" ref="xpdl:Documentation"/>
+            <xsd:element minOccurs="0" ref="xpdl:TransitionRestrictions"/>
+            <xsd:element minOccurs="0" ref="xpdl:ExtendedAttributes"/>
+         </xsd:sequence>
+         <xsd:attribute name="Id" type="xsd:NMTOKEN" use="required"/>
+         <xsd:attribute name="Name" type="xsd:string"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="ActivitySet">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element minOccurs="0" ref="xpdl:Activities"/>
+            <xsd:element minOccurs="0" ref="xpdl:Transitions"/>
+         </xsd:sequence>
+         <xsd:attribute name="Id" type="xsd:NMTOKEN" use="required"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="ActivitySets">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="xpdl:ActivitySet"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="ActualParameter" type="xsd:string"/>
+   <xsd:element name="ActualParameters">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="xpdl:ActualParameter"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Application">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element minOccurs="0" ref="xpdl:Description"/>
+            <xsd:choice>
+               <xsd:element ref="xpdl:FormalParameters"/>
+               <xsd:element minOccurs="0" ref="xpdl:ExternalReference"/>
+            </xsd:choice>
+            <xsd:element minOccurs="0" ref="xpdl:ExtendedAttributes"/>
+         </xsd:sequence>
+         <xsd:attribute name="Id" type="xsd:NMTOKEN" use="required"/>
+         <xsd:attribute name="Name" type="xsd:string"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Applications">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="xpdl:Application"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="ArrayType">
+      <xsd:complexType>
+         <xsd:group ref="xpdl:DataTypes"/>
+         <xsd:attribute name="LowerIndex" type="xsd:NMTOKEN" use="required"/>
+         <xsd:attribute name="UpperIndex" type="xsd:NMTOKEN" use="required"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Author" type="xsd:string"/>
+   <xsd:element name="Automatic">
+      <xsd:complexType/>
+   </xsd:element>
+   <xsd:element name="BasicType">
+      <xsd:complexType>
+         <xsd:attribute name="Type" use="required">
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:NMTOKEN">
+                  <xsd:enumeration value="STRING"/>
+                  <xsd:enumeration value="FLOAT"/>
+                  <xsd:enumeration value="INTEGER"/>
+                  <xsd:enumeration value="REFERENCE"/>
+                  <xsd:enumeration value="DATETIME"/>
+                  <xsd:enumeration value="BOOLEAN"/>
+                  <xsd:enumeration value="PERFORMER"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+         </xsd:attribute>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="BlockActivity">
+      <xsd:complexType>
+         <xsd:attribute name="BlockId" type="xsd:NMTOKEN" use="required"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Codepage" type="xsd:string"/>
+   <xsd:element name="Condition">
+      <xsd:complexType mixed="true">
+         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+            <xsd:element ref="xpdl:Xpression"/>
+         </xsd:choice>
+         <xsd:attribute name="Type">
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:NMTOKEN">
+                  <xsd:enumeration value="CONDITION"/>
+                  <xsd:enumeration value="OTHERWISE"/>
+                  <xsd:enumeration value="EXCEPTION"/>
+                  <xsd:enumeration value="DEFAULTEXCEPTION"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+         </xsd:attribute>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="ConformanceClass">
+      <xsd:complexType>
+         <xsd:attribute name="GraphConformance">
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:NMTOKEN">
+                  <xsd:enumeration value="FULL_BLOCKED"/>
+                  <xsd:enumeration value="LOOP_BLOCKED"/>
+                  <xsd:enumeration value="NON_BLOCKED"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+         </xsd:attribute>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Cost" type="xsd:string"/>
+   <xsd:element name="CostUnit" type="xsd:string"/>
+   <xsd:element name="Countrykey" type="xsd:string"/>
+   <xsd:element name="Created" type="xsd:string"/>
+   <xsd:element name="DataField">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element ref="xpdl:DataType"/>
+            <xsd:element minOccurs="0" ref="xpdl:InitialValue"/>
+            <xsd:element minOccurs="0" ref="xpdl:Length"/>
+            <xsd:element minOccurs="0" ref="xpdl:Description"/>
+            <xsd:element minOccurs="0" ref="xpdl:ExtendedAttributes"/>
+         </xsd:sequence>
+         <xsd:attribute name="Id" type="xsd:NMTOKEN" use="required"/>
+         <xsd:attribute name="Name" type="xsd:string"/>
+         <xsd:attribute default="FALSE" name="IsArray">
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:NMTOKEN">
+                  <xsd:enumeration value="TRUE"/>
+                  <xsd:enumeration value="FALSE"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+         </xsd:attribute>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="DataFields">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="xpdl:DataField"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="DataType">
+      <xsd:complexType>
+         <xsd:group ref="xpdl:DataTypes"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:group name="DataTypes">
+      <xsd:choice>
+         <xsd:element ref="xpdl:BasicType"/>
+         <xsd:element ref="xpdl:DeclaredType"/>
+         <xsd:element ref="xpdl:SchemaType"/>
+         <xsd:element ref="xpdl:ExternalReference"/>
+         <xsd:element ref="xpdl:RecordType"/>
+         <xsd:element ref="xpdl:UnionType"/>
+         <xsd:element ref="xpdl:EnumerationType"/>
+         <xsd:element ref="xpdl:ArrayType"/>
+         <xsd:element ref="xpdl:ListType"/>
+      </xsd:choice>
+   </xsd:group>
+   <xsd:element name="Deadline">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="1" name="DeadlineCondition"/>
+            <xsd:element maxOccurs="1" minOccurs="1" name="ExceptionName"/>
+         </xsd:sequence>
+         <xsd:attribute name="Execution">
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:NMTOKEN">
+                  <xsd:enumeration value="ASYNCHR"/>
+                  <xsd:enumeration value="SYNCHR"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+         </xsd:attribute>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="DeclaredType">
+      <xsd:complexType>
+         <xsd:attribute name="Id" type="xsd:IDREF" use="required"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Description" type="xsd:string"/>
+   <xsd:element name="Documentation" type="xsd:string"/>
+   <xsd:element name="Duration" type="xsd:string"/>
+   <xsd:element name="EnumerationType">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" ref="xpdl:EnumerationValue"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="EnumerationValue">
+      <xsd:complexType>
+         <xsd:attribute name="Name" type="xsd:NMTOKEN" use="required"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="ExtendedAttribute">
+      <xsd:complexType mixed="true">
+         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+            <xsd:any maxOccurs="unbounded" minOccurs="0" processContents="lax"/>
+         </xsd:choice>
+         <xsd:attribute name="Name" type="xsd:NMTOKEN" use="required"/>
+         <xsd:attribute name="Value" type="xsd:string"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="ExtendedAttributes">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="xpdl:ExtendedAttribute"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="ExternalPackage">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element minOccurs="0" ref="xpdl:ExtendedAttributes"/>
+         </xsd:sequence>
+         <xsd:attribute name="href" type="xsd:string"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="ExternalPackages">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="xpdl:ExternalPackage"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="ExternalReference">
+      <xsd:complexType>
+         <xsd:attribute name="xref" type="xsd:NMTOKEN" use="optional"/>
+         <xsd:attribute name="location" type="xsd:anyURI" use="required"/>
+         <xsd:attribute name="namespace" type="xsd:anyURI" use="optional"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="FinishMode">
+      <xsd:complexType>
+         <xsd:choice>
+            <xsd:element ref="xpdl:Automatic"/>
+            <xsd:element ref="xpdl:Manual"/>
+         </xsd:choice>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="FormalParameter">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element ref="xpdl:DataType"/>
+            <xsd:element minOccurs="0" ref="xpdl:Description"/>
+         </xsd:sequence>
+         <xsd:attribute name="Id" type="xsd:NMTOKEN" use="required"/>
+         <xsd:attribute name="Index" type="xsd:NMTOKEN"/>
+         <xsd:attribute default="IN" name="Mode">
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:NMTOKEN">
+                  <xsd:enumeration value="IN"/>
+                  <xsd:enumeration value="OUT"/>
+                  <xsd:enumeration value="INOUT"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+         </xsd:attribute>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="FormalParameters">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="xpdl:FormalParameter"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Icon" type="xsd:string"/>
+   <xsd:element name="Implementation">
+      <xsd:complexType>
+         <xsd:choice>
+            <xsd:element ref="xpdl:No"/>
+            <xsd:element maxOccurs="unbounded" ref="xpdl:Tool"/>
+            <xsd:element ref="xpdl:SubFlow"/>
+         </xsd:choice>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="InitialValue" type="xsd:string"/>
+   <xsd:element name="Join">
+      <xsd:complexType>
+         <xsd:attribute name="Type">
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:NMTOKEN">
+                  <xsd:enumeration value="AND"/>
+                  <xsd:enumeration value="XOR"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+         </xsd:attribute>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Length" type="xsd:string"/>
+   <xsd:element name="Limit" type="xsd:string"/>
+   <xsd:element name="ListType">
+      <xsd:complexType>
+         <xsd:group ref="xpdl:DataTypes"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Manual">
+      <xsd:complexType/>
+   </xsd:element>
+   <xsd:element name="Member">
+      <xsd:complexType>
+         <xsd:group ref="xpdl:DataTypes"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="No">
+      <xsd:complexType/>
+   </xsd:element>
+   <xsd:element name="Package">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element ref="xpdl:PackageHeader"/>
+            <xsd:element minOccurs="0" ref="xpdl:RedefinableHeader"/>
+            <xsd:element minOccurs="0" ref="xpdl:ConformanceClass"/>
+            <xsd:element minOccurs="0" ref="xpdl:Script"/>
+            <xsd:element minOccurs="0" ref="xpdl:ExternalPackages"/>
+            <xsd:element minOccurs="0" ref="xpdl:TypeDeclarations"/>
+            <xsd:element minOccurs="0" ref="xpdl:Participants"/>
+            <xsd:element minOccurs="0" ref="xpdl:Applications"/>
+            <xsd:element minOccurs="0" ref="xpdl:DataFields"/>
+            <xsd:element minOccurs="0" ref="xpdl:WorkflowProcesses"/>
+            <xsd:element minOccurs="0" ref="xpdl:ExtendedAttributes"/>
+         </xsd:sequence>
+         <xsd:attribute name="Id" type="xsd:NMTOKEN" use="required"/>
+         <xsd:attribute name="Name" type="xsd:string"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="PackageHeader">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element ref="xpdl:XPDLVersion"/>
+            <xsd:element ref="xpdl:Vendor"/>
+            <xsd:element ref="xpdl:Created"/>
+            <xsd:element minOccurs="0" ref="xpdl:Description"/>
+            <xsd:element minOccurs="0" ref="xpdl:Documentation"/>
+            <xsd:element minOccurs="0" ref="xpdl:PriorityUnit"/>
+            <xsd:element minOccurs="0" ref="xpdl:CostUnit"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Participant">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element ref="xpdl:ParticipantType"/>
+            <xsd:element minOccurs="0" ref="xpdl:Description"/>
+            <xsd:element minOccurs="0" ref="xpdl:ExternalReference"/>
+            <xsd:element minOccurs="0" ref="xpdl:ExtendedAttributes"/>
+         </xsd:sequence>
+         <xsd:attribute name="Id" type="xsd:NMTOKEN" use="required"/>
+         <xsd:attribute name="Name" type="xsd:string"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="ParticipantType">
+      <xsd:complexType>
+         <xsd:attribute name="Type" use="required">
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:NMTOKEN">
+                  <xsd:enumeration value="RESOURCE_SET"/>
+                  <xsd:enumeration value="RESOURCE"/>
+                  <xsd:enumeration value="ROLE"/>
+                  <xsd:enumeration value="ORGANIZATIONAL_UNIT"/>
+                  <xsd:enumeration value="HUMAN"/>
+                  <xsd:enumeration value="SYSTEM"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+         </xsd:attribute>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Participants">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="xpdl:Participant"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Performer" type="xsd:string"/>
+   <xsd:element name="Priority" type="xsd:string"/>
+   <xsd:element name="PriorityUnit" type="xsd:string"/>
+   <xsd:element name="ProcessHeader">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element minOccurs="0" ref="xpdl:Created"/>
+            <xsd:element minOccurs="0" ref="xpdl:Description"/>
+            <xsd:element minOccurs="0" ref="xpdl:Priority"/>
+            <xsd:element minOccurs="0" ref="xpdl:Limit"/>
+            <xsd:element minOccurs="0" ref="xpdl:ValidFrom"/>
+            <xsd:element minOccurs="0" ref="xpdl:ValidTo"/>
+            <xsd:element minOccurs="0" ref="xpdl:TimeEstimation"/>
+         </xsd:sequence>
+         <xsd:attribute name="DurationUnit">
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:NMTOKEN">
+                  <xsd:enumeration value="Y"/>
+                  <xsd:enumeration value="M"/>
+                  <xsd:enumeration value="D"/>
+                  <xsd:enumeration value="h"/>
+                  <xsd:enumeration value="m"/>
+                  <xsd:enumeration value="s"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+         </xsd:attribute>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="RecordType">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" ref="xpdl:Member"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="RedefinableHeader">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element minOccurs="0" ref="xpdl:Author"/>
+            <xsd:element minOccurs="0" ref="xpdl:Version"/>
+            <xsd:element minOccurs="0" ref="xpdl:Codepage"/>
+            <xsd:element minOccurs="0" ref="xpdl:Countrykey"/>
+            <xsd:element minOccurs="0" ref="xpdl:Responsibles"/>
+         </xsd:sequence>
+         <xsd:attribute name="PublicationStatus">
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:NMTOKEN">
+                  <xsd:enumeration value="UNDER_REVISION"/>
+                  <xsd:enumeration value="RELEASED"/>
+                  <xsd:enumeration value="UNDER_TEST"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+         </xsd:attribute>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Responsible" type="xsd:string"/>
+   <xsd:element name="Responsibles">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="xpdl:Responsible"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Route">
+      <xsd:complexType/>
+   </xsd:element>
+   <xsd:element name="SchemaType">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:any maxOccurs="unbounded" minOccurs="0" namespace="##other" processContents="lax"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Script">
+      <xsd:complexType>
+         <xsd:attribute name="Type" type="xsd:string" use="required"/>
+         <xsd:attribute name="Version" type="xsd:string" use="optional"/>
+         <xsd:attribute name="Grammar" type="xsd:anyURI" use="optional"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="SimulationInformation">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element ref="xpdl:Cost"/>
+            <xsd:element ref="xpdl:TimeEstimation"/>
+         </xsd:sequence>
+         <xsd:attribute name="Instantiation">
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:NMTOKEN">
+                  <xsd:enumeration value="ONCE"/>
+                  <xsd:enumeration value="MULTIPLE"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+         </xsd:attribute>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Split">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element minOccurs="0" ref="xpdl:TransitionRefs"/>
+         </xsd:sequence>
+         <xsd:attribute name="Type">
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:NMTOKEN">
+                  <xsd:enumeration value="AND"/>
+                  <xsd:enumeration value="XOR"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+         </xsd:attribute>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="StartMode">
+      <xsd:complexType>
+         <xsd:choice>
+            <xsd:element ref="xpdl:Automatic"/>
+            <xsd:element ref="xpdl:Manual"/>
+         </xsd:choice>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="SubFlow">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element minOccurs="0" ref="xpdl:ActualParameters"/>
+         </xsd:sequence>
+         <xsd:attribute name="Id" type="xsd:string" use="required"/>
+         <xsd:attribute name="Execution">
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:NMTOKEN">
+                  <xsd:enumeration value="ASYNCHR"/>
+                  <xsd:enumeration value="SYNCHR"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+         </xsd:attribute>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="TimeEstimation">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element minOccurs="0" ref="xpdl:WaitingTime"/>
+            <xsd:element minOccurs="0" ref="xpdl:WorkingTime"/>
+            <xsd:element minOccurs="0" ref="xpdl:Duration"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Tool">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element minOccurs="0" ref="xpdl:ActualParameters"/>
+            <xsd:element minOccurs="0" ref="xpdl:Description"/>
+            <xsd:element minOccurs="0" ref="xpdl:ExtendedAttributes"/>
+         </xsd:sequence>
+         <xsd:attribute name="Id" type="xsd:NMTOKEN" use="required"/>
+         <xsd:attribute name="Type">
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:NMTOKEN">
+                  <xsd:enumeration value="APPLICATION"/>
+                  <xsd:enumeration value="PROCEDURE"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+         </xsd:attribute>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Transition">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element minOccurs="0" ref="xpdl:Condition"/>
+            <xsd:element minOccurs="0" ref="xpdl:Description"/>
+            <xsd:element minOccurs="0" ref="xpdl:ExtendedAttributes"/>
+         </xsd:sequence>
+         <xsd:attribute name="Id" type="xsd:NMTOKEN" use="required"/>
+         <xsd:attribute name="From" type="xsd:NMTOKEN" use="required"/>
+         <xsd:attribute name="To" type="xsd:NMTOKEN" use="required"/>
+         <xsd:attribute name="Name" type="xsd:string"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="TransitionRef">
+      <xsd:complexType>
+         <xsd:attribute name="Id" type="xsd:NMTOKEN" use="required"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="TransitionRefs">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="xpdl:TransitionRef"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="TransitionRestriction">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element minOccurs="0" ref="xpdl:Join"/>
+            <xsd:element minOccurs="0" ref="xpdl:Split"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="TransitionRestrictions">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="xpdl:TransitionRestriction"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="Transitions">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="xpdl:Transition"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="TypeDeclaration">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:group ref="xpdl:DataTypes"/>
+            <xsd:element minOccurs="0" ref="xpdl:Description"/>
+            <xsd:element minOccurs="0" ref="xpdl:ExtendedAttributes"/>
+         </xsd:sequence>
+         <xsd:attribute name="Id" type="xsd:ID" use="required"/>
+         <xsd:attribute name="Name" type="xsd:string"/>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="TypeDeclarations">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="xpdl:TypeDeclaration"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="UnionType">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" ref="xpdl:Member"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="ValidFrom" type="xsd:string"/>
+   <xsd:element name="ValidTo" type="xsd:string"/>
+   <xsd:element name="Vendor" type="xsd:string"/>
+   <xsd:element name="Version" type="xsd:string"/>
+   <xsd:element name="WaitingTime" type="xsd:string"/>
+   <xsd:element name="WorkflowProcess">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element ref="xpdl:ProcessHeader"/>
+            <xsd:element minOccurs="0" ref="xpdl:RedefinableHeader"/>
+            <xsd:element minOccurs="0" ref="xpdl:FormalParameters"/>
+            <xsd:element minOccurs="0" ref="xpdl:DataFields"/>
+            <xsd:element minOccurs="0" ref="xpdl:Participants"/>
+            <xsd:element minOccurs="0" ref="xpdl:Applications"/>
+            <xsd:element minOccurs="0" ref="xpdl:ActivitySets"/>
+            <xsd:element minOccurs="0" ref="xpdl:Activities"/>
+            <xsd:element minOccurs="0" ref="xpdl:Transitions"/>
+            <xsd:element minOccurs="0" ref="xpdl:ExtendedAttributes"/>
+         </xsd:sequence>
+         <xsd:attribute name="Id" type="xsd:NMTOKEN" use="required"/>
+         <xsd:attribute name="Name" type="xsd:string"/>
+         <xsd:attribute name="AccessLevel">
+            <xsd:simpleType>
+               <xsd:restriction base="xsd:NMTOKEN">
+                  <xsd:enumeration value="PUBLIC"/>
+                  <xsd:enumeration value="PRIVATE"/>
+               </xsd:restriction>
+            </xsd:simpleType>
+         </xsd:attribute>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="WorkflowProcesses">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="xpdl:WorkflowProcess"/>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   <xsd:element name="WorkingTime" type="xsd:string"/>
+   <xsd:element name="XPDLVersion" type="xsd:string"/>
+   <xsd:element name="Xpression">
+      <xsd:complexType mixed="true">
+         <xsd:choice maxOccurs="unbounded" minOccurs="0">
+            <xsd:any maxOccurs="unbounded" minOccurs="0" processContents="lax"/>
+         </xsd:choice>
+      </xsd:complexType>
+   </xsd:element>
+</xsd:schema>

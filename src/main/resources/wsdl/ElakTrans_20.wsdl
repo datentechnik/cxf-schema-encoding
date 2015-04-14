@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- File: ElakTrans.wsdl Version: 2.0 --><!-- 02.11.2010 Author: Mag. Stefan Fürlinger --><!-- (c) 2010 - Land OÖ --><wsdl:definitions targetNamespace="http://reference.e-government.gv.at/namespace/elaktrans/2#" xmlns="http://reference.e-government.gv.at/namespace/elaktrans/2#" xmlns:eingang="http://reference.e-government.gv.at/namespace/antragsdaten/de/20040917#" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:sw="http://reference.e-government.gv.at/namespace/xml-sw/1#" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:documentation>
+		Dieses WSDL-Dokument beschreibt den Transfer
+		von Akten, Geschäftsfällen und -stücken zwischen verschiedenen
+		EDIAKT-Systemen.
+	</wsdl:documentation>
+	
+	<!--*****************************************************************************-->
+	<!--***              Wsdl-Types (incl. Includes, SOAP-Faults)                 ***-->
+	<!--*****************************************************************************-->
+	<wsdl:types> 
+	
+		<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://reference.e-government.gv.at/namespace/elaktrans/2#" version="1.0.0" xmlns:baukasten="http://reference.e-government.gv.at/namespace/xml-baukasten/1#" xmlns:edi="http://reference.e-government.gv.at/namespace/ediakt/20050504#" xmlns:p="http://reference.e-government.gv.at/namespace/persondata/20020228#" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xsd:include schemaLocation="ElakTrans_20.xsd"/>
+	
+			<!-- Exception Handling lt. ReferenceServer - SOAP-Faults v1.0.6 -->
+			<xsd:element name="Fault">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="faultcode" type="xs:QName"/>
+						<xsd:element name="faultstring" type="xs:string"/>
+						<xsd:element name="faultactor" type="xs:anyURI"/>
+						<xsd:element name="detail">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:any maxOccurs="unbounded" minOccurs="0" namespace="##any" processContents="lax"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+		</xsd:schema>
+		
+	</wsdl:types>
+	
+
+	<!--*****************************************************************************-->
+	<!--***                             Wsdl-Messages                             ***-->
+	<!--*****************************************************************************-->
+	<wsdl:message name="insertApplicationInput">
+		<wsdl:part element="insertApplicationInputObject" name="insertApplicationInputObject"/>
+	</wsdl:message>
+	<wsdl:message name="insertApplicationOutput">
+		<wsdl:part element="insertApplicationOutputObject" name="insertApplicationOutputObject"/>
+	</wsdl:message>
+
+	<wsdl:message name="updateApplicationInput">
+		<wsdl:part element="updateApplicationInputObject" name="updateApplicationInputObject"/>
+	</wsdl:message>
+	<wsdl:message name="updateApplicationOutput">
+		<wsdl:part element="updateApplicationOutputObject" name="updateApplicationOutputObject"/>
+	</wsdl:message>
+	
+	<wsdl:message name="updateApplicationStateInput">
+		<wsdl:part element="updateApplicationStateInputObject" name="updateApplicationStateInputObject"/>
+	</wsdl:message>
+	<wsdl:message name="updateApplicationStateOutput">
+		<wsdl:part element="updateApplicationStateOutputObject" name="updateApplicationStateAppOutputObject"/>
+	</wsdl:message>
+
+	<wsdl:message name="deleteApplicationInput">
+		<wsdl:part element="deleteApplicationInputObject" name="deleteApplicationInputObject"/>
+	</wsdl:message>
+	<wsdl:message name="deleteApplicationOutput">
+		<wsdl:part element="deleteApplicationOutputObject" name="deleteApplicationOutputObject"/>
+	</wsdl:message>
+	
+	<wsdl:message name="updateApplicationKeysInput">
+		<wsdl:part element="updateApplicationKeysInputObject" name="updateApplicationKeysInputObject"/>
+	</wsdl:message>
+	<wsdl:message name="updateApplicationKeysOutput">
+		<wsdl:part element="updateApplicationKeysOutputObject" name="updateApplicationKeysOutputObject"/>
+	</wsdl:message>
+
+	<wsdl:message name="insertELAKInput">
+		<wsdl:part element="insertELAKInputObject" name="insertELAKInputObject"/>
+	</wsdl:message>
+	<wsdl:message name="insertELAKOutput">
+		<wsdl:part element="insertELAKOutputObject" name="insertELAKOutputObject"/>
+	</wsdl:message>
+
+	<wsdl:message name="updateELAKInput">
+		<wsdl:part element="updateELAKInputObject" name="updateELAKInputObject"/>
+	</wsdl:message>
+	<wsdl:message name="updateELAKOutput">
+		<wsdl:part element="updateELAKOutputObject" name="updateELAKOutputObject"/>
+	</wsdl:message>
+
+	<wsdl:message name="updateELAKStateInput">
+		<wsdl:part element="updateELAKStateInputObject" name="updateELAKStateInputObject"/>
+	</wsdl:message>
+	<wsdl:message name="updateELAKStateOutput">
+		<wsdl:part element="updateELAKStateOutputObject" name="updateELAKStateAppOutputObject"/>
+	</wsdl:message>
+
+	<wsdl:message name="deleteELAKInput">
+		<wsdl:part element="deleteELAKInputObject" name="edleteELAKOutputInputObject"/>
+	</wsdl:message>
+	<wsdl:message name="deleteELAKOutput">
+		<wsdl:part element="deleteELAKOutputObject" name="deleteELAKOutputObject"/>
+	</wsdl:message>
+	
+	<wsdl:message name="updateELAKKeysInput">
+		<wsdl:part element="updateELAKKeysInputObject" name="updateELAKKeysInputObject"/>
+	</wsdl:message>
+	<wsdl:message name="updateELAKKeysOutput">
+		<wsdl:part element="updateELAKKeysOutputObject" name="updateELAKKeysOutputObject"/>
+	</wsdl:message>
+	
+	<wsdl:message name="readELAKInput">
+		<wsdl:part element="readELAKInputObject" name="readELAKInputObject"/>
+	</wsdl:message>
+	<wsdl:message name="readELAKOutput">
+		<wsdl:part element="readELAKOutputObject" name="readELAKOutputObject"/>
+	</wsdl:message>
+	
+	<wsdl:message name="sendELAKInput">
+		<wsdl:part element="sendELAKInputObject" name="sendELAKInputObject"/>
+	</wsdl:message>
+	<wsdl:message name="sendELAKOutput">
+		<wsdl:part element="sendELAKOutputObject" name="sendELAKOutputObject"/>
+	</wsdl:message>
+
+	<wsdl:message name="Fault">
+		<wsdl:part element="Fault" name="fault"/>
+	</wsdl:message>
+	
+
+	<!--*****************************************************************************-->
+	<!--***                             Wsdl-PortTypes                            ***-->
+	<!--*****************************************************************************-->
+	<wsdl:portType name="elakTrans">
+		<wsdl:operation name="insertApplication">
+			<wsdl:input message="insertApplicationInput" name="insertApplicationInput"/>
+			<wsdl:output message="insertApplicationOutput" name="insertApplicationOutput"/>
+			<wsdl:fault message="Fault" name="Fault"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="updateApplication">
+			<wsdl:input message="updateApplicationInput" name="updateApplicationInput"/>
+			<wsdl:output message="updateApplicationOutput" name="updateApplicationOutput"/>
+			<wsdl:fault message="Fault" name="Fault"/>
+		</wsdl:operation>
+		
+		<wsdl:operation name="updateApplicationState">
+			<wsdl:input message="updateApplicationStateInput" name="updateApplicationStateInput"/>
+			<wsdl:output message="updateApplicationStateOutput" name="updateApplicationStateOutput"/>
+			<wsdl:fault message="Fault" name="Fault"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="deleteApplication">
+			<wsdl:input message="deleteApplicationInput" name="deleteApplicationInput"/>
+			<wsdl:output message="deleteApplicationOutput" name="deleteApplicationOutput"/>
+			<wsdl:fault message="Fault" name="Fault"/>
+		</wsdl:operation>
+		
+		<wsdl:operation name="updateApplicationKeys">
+			<wsdl:input message="updateApplicationKeysInput" name="updateApplicationKeysInput"/>
+			<wsdl:output message="updateApplicationKeysOutput" name="updateApplicationKeysOutput"/>
+			<wsdl:fault message="Fault" name="Fault"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="insertELAK">
+			<wsdl:input message="insertELAKInput" name="insertELAKInput"/>
+			<wsdl:output message="insertELAKOutput" name="insertELAKOutput"/>
+			<wsdl:fault message="Fault" name="Fault"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="updateELAK">
+			<wsdl:input message="updateELAKInput" name="updateELAKInput"/>
+			<wsdl:output message="updateELAKOutput" name="updateELAKOutput"/>
+			<wsdl:fault message="Fault" name="Fault"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="updateELAKState">
+			<wsdl:input message="updateELAKStateInput" name="updateELAKStateInput"/>
+			<wsdl:output message="updateELAKStateOutput" name="updateELAKStateOutput"/>
+			<wsdl:fault message="Fault" name="Fault"/>
+		</wsdl:operation>
+
+		<wsdl:operation name="deleteELAK">
+			<wsdl:input message="deleteELAKInput" name="deleteELAKInput"/>
+			<wsdl:output message="deleteELAKOutput" name="deleteELAKOutput"/>
+			<wsdl:fault message="Fault" name="Fault"/>
+		</wsdl:operation>
+		
+		<wsdl:operation name="updateELAKKeys">
+			<wsdl:input message="updateELAKKeysInput" name="updateELAKKeysInput"/>
+			<wsdl:output message="updateELAKKeysOutput" name="updateELAKKeysOutput"/>
+			<wsdl:fault message="Fault" name="Fault"/>
+		</wsdl:operation>
+		
+		<wsdl:operation name="readELAK">
+			<wsdl:input message="readELAKInput" name="readELAKInput"/>
+			<wsdl:output message="readELAKOutput" name="readELAKOutput"/>
+			<wsdl:fault message="Fault" name="Fault"/>
+		</wsdl:operation>
+		
+		<wsdl:operation name="sendELAK">
+			<wsdl:input message="sendELAKInput" name="sendELAKInput"/>
+			<wsdl:output message="sendELAKOutput" name="sendELAKOutput"/>
+			<wsdl:fault message="Fault" name="Fault"/>
+		</wsdl:operation>
+
+	</wsdl:portType>
+
+
+	<!--*****************************************************************************-->
+	<!--***                              Wsdl-Bindung                             ***-->
+	<!--*****************************************************************************-->
+	<wsdl:binding name="ElakTransSoapBinding" type="elakTrans">
+	
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="insertApplication">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="insertApplicationInput">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="insertApplicationOutput">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="Fault">
+				<soap:fault name="Fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="updateApplication">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="updateApplicationInput">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="updateApplicationOutput">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="Fault">
+				<soap:fault name="Fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="updateApplicationState">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="updateApplicationStateInput">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="updateApplicationStateOutput">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="Fault">
+				<soap:fault name="Fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="deleteApplication">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="deleteApplicationInput">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="deleteApplicationOutput">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="Fault">
+				<soap:fault name="Fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="updateApplicationKeys">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="updateApplicationKeysInput">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="updateApplicationKeysOutput">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="Fault">
+				<soap:fault name="Fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="insertELAK">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="insertELAKInput">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="insertELAKOutput">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="Fault">
+				<soap:fault name="Fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="updateELAK">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="updateELAKInput">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="updateELAKOutput">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="Fault">
+				<soap:fault name="Fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="updateELAKState">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="updateELAKStateInput">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="updateELAKStateOutput">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="Fault">
+				<soap:fault name="Fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="deleteELAK">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="deleteELAKInput">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="deleteELAKOutput">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="Fault">
+				<soap:fault name="Fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="updateELAKKeys">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="updateELAKKeysInput">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="updateELAKKeysOutput">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="Fault">
+				<soap:fault name="Fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="readELAK">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="readELAKInput">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="readELAKOutput">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="Fault">
+				<soap:fault name="Fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="sendELAK">
+			<soap:operation soapAction=""/>
+			<wsdl:input name="sendELAKInput">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="sendELAKOutput">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="Fault">
+				<soap:fault name="Fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+	</wsdl:binding>
+
+	<!--*****************************************************************************-->
+	<!--***                             Wsdl-Service                              ***-->
+	<!--*****************************************************************************-->
+	<wsdl:service name="ElakTransService">
+		<wsdl:port binding="ElakTransSoapBinding" name="ElakTransService">
+			<soap:address location="local://elaktrans"/>
+		</wsdl:port>
+	</wsdl:service>
+
+</wsdl:definitions>
